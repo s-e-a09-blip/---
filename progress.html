@@ -20,7 +20,7 @@
     </header>
 
     <main style="padding: 20px">
-      <h1 style="text-align: center; margin-bottom: 20px">Прогресс</h1>
+      <h1 style="text-align: center; margin-bottom: 20px">Мой прогресс</h1>
 
       <!-- Карточки статистики -->
       <div class="stats-cards" id="statsCards"></div>
@@ -34,8 +34,16 @@
             <th>Статус</th>
           </tr>
         </thead>
-        <tbody id="tableBody"></tbody>
+        <tbody id="tableBody">
+          <tr class="empty-message">
+            <td colspan="3">
+              📭 Пока нет данных о тестах. Пройдите тест, чтобы увидеть
+              прогресс!
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <!-- ← Этой строки не хватало -->
 
       <!-- Прогресс-бар -->
       <div class="progress-section">
@@ -47,94 +55,118 @@
           <div class="progress-bar-fill" id="progressFill"></div>
         </div>
       </div>
+
+      <!-- Кнопка сброса прогресса -->
+      <div style="display: flex; justify-content: center; margin-top: 20px">
+        <button class="test-btn reset-btn" id="resetBtn">
+          🔄 Сбросить прогресс
+        </button>
+      </div>
     </main>
 
     <script>
-      // Данные из localStorage или пример
-      const savedProgress = JSON.parse(localStorage.getItem("progress")) || {};
+      // Функция загрузки прогресса из localStorage (использует тот же ключ, что и тест)
+      function loadProgress() {
+        const saved = localStorage.getItem("progress");
+        return saved ? JSON.parse(saved) : {};
+      }
 
-      // Пример данных
-      const defaultTests = {
-        "Математические операции": { score: 0, total: 6 },
-        test1: { score: 9, total: 9 },
-        test2: { score: 7, total: 7 },
-        "Условные операторы": { score: 1, total: 7 },
-        "Кортежи и строки": { score: 2, total: 7 },
-      };
+      // Функция обновления страницы
+      function updateProgress() {
+        const progress = loadProgress();
 
-      const progress =
-        Object.keys(savedProgress).length === 0 ? defaultTests : savedProgress;
+        const totalTests = Object.keys(progress).length;
+        let passedCount = 0;
+        let totalScore = 0;
+        let totalMax = 0;
 
-      const totalTests = Object.keys(progress).length;
-      let passedCount = 0;
-      let totalScore = 0;
-      let totalMax = 0;
+        Object.values(progress).forEach(({ score, total }) => {
+          totalScore += score;
+          totalMax += total;
+          if (score === total) passedCount++;
+        });
 
-      Object.values(progress).forEach(({ score, total }) => {
-        totalScore += score;
-        totalMax += total;
-        if (score === total) passedCount++;
-      });
+        const overallPercent =
+          totalMax > 0 ? Math.round((totalScore / totalMax) * 100) : 0;
 
-      const overallPercent =
-        totalMax > 0 ? Math.round((totalScore / totalMax) * 100) : 0;
+        // Обновляем таблицу
+        const tableBody = document.getElementById("tableBody");
 
-      // Карточки статистики
-      const statsCards = document.getElementById("statsCards");
-      statsCards.innerHTML = `
-      <div class="stat-card">
-        <div class="stat-number">${totalTests}</div>
-        <div class="stat-label">Всего тестов</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">${passedCount}</div>
-        <div class="stat-label">Пройдено полностью</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">${totalScore}/${totalMax}</div>
-        <div class="stat-label">Всего баллов</div>
-      </div>
-    `;
-
-      // Таблица
-      const tableBody = document.getElementById("tableBody");
-
-      Object.entries(progress).forEach(([testName, { score, total }]) => {
-        const row = document.createElement("tr");
-
-        let badgeClass = "";
-        let badgeText = "";
-        if (score === total) {
-          badgeClass = "badge-done";
-          badgeText = "Пройден";
-        } else if (score === 0) {
-          badgeClass = "badge-start";
-          badgeText = "Не начат";
+        if (totalTests === 0) {
+          tableBody.innerHTML = `
+                    <tr class="empty-message">
+                        <td colspan="3">📭 Пока нет данных о тестах. Пройдите тест, чтобы увидеть прогресс!</td>
+                    </tr>
+                `;
         } else {
-          badgeClass = "badge-progress";
-          badgeText = "В процессе";
+          tableBody.innerHTML = "";
+          // Сортируем тесты по названию
+          const sortedTests = Object.entries(progress).sort((a, b) =>
+            a[0].localeCompare(b[0]),
+          );
+
+          sortedTests.forEach(([testName, { score, total }]) => {
+            const row = document.createElement("tr");
+
+            let badgeClass = "";
+            let badgeText = "";
+            if (score === total) {
+              badgeClass = "badge-done";
+              badgeText = "✅ Пройден";
+            } else if (score === 0) {
+              badgeClass = "badge-start";
+              badgeText = "📖 Не начат";
+            } else {
+              badgeClass = "badge-progress";
+              badgeText = "⚡ В процессе";
+            }
+
+            const percent = Math.round((score / total) * 100);
+            let resultClass = "";
+            if (percent >= 80) resultClass = "result-high";
+            else if (percent >= 50) resultClass = "result-medium";
+            else resultClass = "result-low";
+
+            row.innerHTML = `
+                        <td><strong>${testName}</strong></td>
+                        <td class="${resultClass}">${score} / ${total}</td>
+                        <td><span class="badge ${badgeClass}">${badgeText}</span></td>
+                    `;
+            tableBody.appendChild(row);
+          });
         }
 
-        const percent = Math.round((score / total) * 100);
-        let resultClass = "";
-        if (percent >= 80) resultClass = "result-high";
-        else if (percent >= 50) resultClass = "result-medium";
-        else resultClass = "result-low";
+        // Обновляем прогресс-бар
+        const fill = document.getElementById("progressFill");
+        const percentText = document.getElementById("percentText");
 
-        row.innerHTML = `
-        <td>${testName}</td>
-        <td class="${resultClass}">${score} / ${total}</td>
-        <td><span class="badge ${badgeClass}">${badgeText}</span></td>
-      `;
-        tableBody.appendChild(row);
+        fill.style.width = overallPercent + "%";
+        percentText.textContent = overallPercent + "%";
+
+        if (overallPercent === 100) {
+          fill.style.backgroundColor = "#00aa88";
+        } else {
+          fill.style.backgroundColor = "#3498db";
+        }
+      }
+
+      // Кнопка сброса прогресса
+      document.getElementById("resetBtn")?.addEventListener("click", () => {
+        if (confirm("Вы уверены, что хотите сбросить весь прогресс?")) {
+          localStorage.removeItem("progress");
+          updateProgress();
+        }
       });
 
-      // Прогресс-бар
-      const fill = document.getElementById("progressFill");
-      const percentText = document.getElementById("percentText");
+      // Инициализация страницы
+      updateProgress();
 
-      fill.style.width = overallPercent + "%";
-      percentText.textContent = overallPercent + "%";
+      // Слушаем изменения в localStorage (если данные изменились на другой вкладке)
+      window.addEventListener("storage", (event) => {
+        if (event.key === "progress") {
+          updateProgress();
+        }
+      });
     </script>
   </body>
 </html>
