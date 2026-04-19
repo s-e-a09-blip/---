@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ввод и вывод</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main-topic">
+      <div class="b2">
+        <h1>Ввод и вывод данных</h1>
+        <p class="text-style">input() и print()</p>
+      </div>
+      <h1 class="topic-title">Входные данные</h1>
+      <div class="note">
+        <p>
+          Приложения Python должны быть динамическими, иначе говоря, они должны
+          получать входные данные непосредственно от пользователя и выдавать
+          соответствующий результат. Интерпретатор Python и все функции вашей
+          программы могут обращаться к этим входным значениям
+        </p>
+        <p>
+          В главе я приведу несколько примеров программ и покажу, как сделать их
+          более удобными для пользователя при помощи операций ввода и вывода.
+        </p>
+      </div>
+      <article class="subsection">
+        <h2 class="subtitle">Почему входные данные необходимы</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Входные данные обеспечивают практическую пользу ваших приложений.
+              Все программы — от веб-приложений до новейших приложений
+              виртуальной реальности — работают на основании входных данных,
+              предоставляемых пользователем. Например, при входе в социальную
+              сеть необходимо ввести адрес электронной почты и пароль. Эти
+              значения называются входными данными, и доступ к своей учетной
+              записи удается получить только в том случае, если введенная
+              информация верна.
+            </p>
+            <p>
+              Даже такие сложные приложения, как системы распознавания лиц,
+              используют информацию о лицах в качестве входных данных. Каждое
+              реальное приложение в наши дни получает и собирает данные,
+              вводимые пользователем, чтобы настроить работу приложения под его
+              потребности.
+            </p>
+          </div>
+        </section>
+        <h2 class="subtitle">Сценарии использования</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Допустим, вы разработали приложение на Python для взрослой
+              аудитории. Это значит, что оно должно быть недоступно для
+              пользователей младше 18 лет
+            </p>
+            <p>
+              В таком случае можно реализовать условную проверку возраста,
+              введенного пользователем. Если введенное значение больше или равно
+              18, приложение становится доступным для пользователя, а если
+              возраст меньше 18 — в доступе будет отказано. Конечно, для
+              проверки того, может ли пользователь работать с вашим приложением,
+              Python может получать данные любых поддерживаемых типов — мы всего
+              лишь рассмотрели один реальный пример. Получение входных данных от
+              пользователей имеет бесконечное практическое применение.
+            </p>
+          </div>
+        </section>
+        <h2 class="subtitle">Функция input()</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Если вызвать функцию input() во время выполнения программы Python,
+              интерпретатор приостанавливает работу и ожидает, когда
+              пользователь введет данные с устройства ввода (с помощью
+              клавиатуры, мыши или на сенсорном экране мобильного устройства).
+            </p>
+            <p>
+              При вводе данных пользователь обычно руководствуется подсказкой,
+              которая выдается приложением. При разработке реальных приложений
+              необходимо создать хороший графический интерфейс для вывода
+              подсказок. В этой главе мы рассмотрим некоторые варианты создания
+              текстовых подсказок, которые могут использоваться разработчиками.
+            </p>
+            <p>
+              После того как данные будут введены, пользователь должен нажать
+              клавишу Enter, чтобы интерпретатор возобновил работу и обработал
+              логические конструкции, использованные в программе.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block"
+              ><p class="code-title">Программный код:</p><code>
+  <span class="perem">sample</span> = <span>imput</span>("Which country do you belong to?: ") <br>
+  <span class="keyword">print</span>(sample + " is a great country")<br> 
+  </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Вывод:</p><code>
+  <span class="output">Which country do you belong to?: China
+    
+  China is a great country</span> <br> 
+      </code></pre>
+            </div>
+          </div>
+        </section>
+      </article>
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Что выведет код: print('Hello', 'World', sep='-')?",
+          options: [
+            "Hello-World",
+            "Hello World",
+            "Hello,World",
+            "Hello - World",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Какой тип данных возвращает функция input()?",
+          options: ["int", "float", "str", "list"],
+          answer: 2,
+        },
+        {
+          q: "Что выведет код: print(10, 20, 30, end='!')?",
+          options: ["10 20 30!", "102030!", "10!20!30!", "Ошибку"],
+          answer: 0,
+        },
+        {
+          q: "Как преобразовать ввод пользователя в целое число?",
+          options: [
+            "int(input())",
+            "input(int)",
+            "str(input())",
+            "input().to_int()",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Что выведет код: name = input('Введите имя: ') и пользователь введет 'Anna'?",
+          options: [
+            "Введите имя: Anna",
+            "name = Anna",
+            "Anna",
+            "Введите имя: , затем Anna",
+          ],
+          answer: 2,
+        },
+        {
+          q: "Как вывести текст без перевода строки в конце?",
+          options: [
+            "print(text, end='')",
+            "print(text, nl=False)",
+            "print(text, newline=0)",
+            "print.noendl(text)",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Что делает sep в функции print?",
+          options: [
+            "Разделитель между аргументами",
+            "Конечный символ",
+            "Выравнивание текста",
+            "Разделитель десятичных дробей",
+          ],
+          answer: 1,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+        <p>${idx + 1}. ${item.q}</p>
+        ${item.options
+          .map(
+            (opt, i) => `
+            <label>
+                <input type='radio' name='q${idx}' value='${i}'> ${opt}
+            </label><br>`
+          )
+          .join("")}
+        `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("test2", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

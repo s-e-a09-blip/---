@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Списки в Python</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <div class="b2">
+      <h1>Списки</h1>
+    </div>
+    <main class="main-topic">
+      <article class="subsection">
+        <h2 class="subtitle">Что такое список в Python?</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Списки (тип list) — это упорядоченные изменяемые коллекции,
+              которые могут хранить элементы любых типов: числа, строки, другие
+              списки и даже смешанные типы данных. Списки — одна из самых мощных
+              и часто используемых структур данных в Python. Они нужны для
+              хранения последовательностей данных, которые можно изменять:
+              добавлять, удалять или заменять элементы.
+            </p>
+          </div>
+        </section>
+        <div class="b2">
+          <h1>Основные операции со списками:</h1>
+          <p>
+            Теперь, когда мы знаем, что такое списки, давайте научимся с ними
+            работать. Python предлагает множество удобных операций для
+            манипуляции списками.
+          </p>
+
+          <p>Создание списка и доступ к элементам</p>
+          <p>
+            Списки создаются с помощью квадратных скобок []. Доступ к элементам
+            осуществляется по индексу, начиная с 0. Отрицательные индексы
+            отсчитываются с конца.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+    <span class="perem">fruits</span> = ["яблоко", "банан", "апельсин"]
+    <span class="perem">print</span>(fruits[0])    # Первый элемент (индекс 0)
+    <span class="perem">print</span>(fruits[1])    # Второй элемент (индекс 1)
+    <span class="perem">print</span>(fruits[-1])   # Последний элемент (индекс -1)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Список fruits содержит три строковых
+            элемента. Обращение к элементу по индексу 0 даёт "яблоко" — первый
+            элемент. Индекс 1 даёт "банан". Отрицательный индекс -1 означает
+            последний элемент списка — "апельсин". Это удобно, когда нужно
+            получить элемент с конца, не зная точной длины списка.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">яблоко</span>
+              <span class="output">банан</span>
+              <span class="output">апельсин</span>
+                    </code></pre>
+          </div>
+
+          <p>Изменение элементов списка</p>
+          <p>
+            Так как списки изменяемы, мы можем менять их элементы, обращаясь к
+            ним по индексу и присваивая новое значение.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+    <span class="perem">numbers</span> = [1, 2, 3, 4, 5]
+    <span class="perem">numbers</span>[2] = 10    # Меняем элемент с индексом 2 (третий элемент)
+    <span class="perem">print</span>(numbers)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Изначально список numbers содержал [1, 2, 3,
+            4, 5]. Команда numbers[2] = 10 заменяет третий элемент (индекс 2,
+            значение 3) на 10. В результате список становится [1, 2, 10, 4, 5].
+            Это демонстрирует изменяемость списков — в отличие от строк, которые
+            нельзя изменить после создания.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">[1, 2, 10, 4, 5]</span>
+                    </code></pre>
+          </div>
+
+          <p>Добавление элементов (append и insert)</p>
+          <p>
+            Метод append() добавляет элемент в конец списка, а insert() — на
+            указанную позицию, сдвигая остальные элементы вправо.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+    <span class="perem">colors</span> = ["красный", "синий"]
+    <span class="perem">colors</span>.append("зеленый")           # Добавляем в конец
+    <span class="perem">colors</span>.insert(1, "желтый")        # Вставляем на позицию 1
+    <span class="perem">print</span>(colors)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> append("зеленый") добавляет новый элемент в
+            самый конец списка. insert(1, "желтый") вставляет элемент "желтый"
+            на позицию с индексом 1 (между "красный" и "синий"). Все элементы,
+            которые были на этой позиции и правее, сдвигаются вправо. append()
+            работает быстрее, так как не требует сдвига элементов.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">['красный', 'желтый', 'синий', 'зеленый']</span>
+                    </code></pre>
+          </div>
+
+          <p>Удаление элементов (remove, pop и del)</p>
+          <p>
+            remove() удаляет первый найденный элемент по значению, pop() удаляет
+            по индексу и возвращает удалённый элемент, а del удаляет по индексу
+            или срезу.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+    <span class="perem">animals</span> = ["кот", "собака", "птица", "рыба"]
+    <span class="perem">animals</span>.remove("птица")         # Удаляем по значению
+    <span class="perem">last</span> = animals.pop()            # Удаляем последний элемент и получаем его
+    <span class="perem">del</span> animals[0]                  # Удаляем первый элемент
+    <span class="perem">print</span>(animals)
+    <span class="perem">print</span>("Удаленный элемент:", last)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> remove("птица") ищет и удаляет первый элемент
+            со значением "птица". pop() без аргумента удаляет последний элемент
+            и возвращает его (в переменную last попадает "рыба"). del animals[0]
+            удаляет элемент с индексом 0 ("кот"). В итоге остаётся только
+            ["собака"]. Если нужно удалить элемент по индексу, но при этом
+            получить его значение — используйте pop(). Если значение не нужно —
+            подойдёт del.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">['собака']</span>
+              <span class="output">Удаленный элемент: рыба</span>
+                    </code></pre>
+          </div>
+
+          <p>Срезы списков</p>
+          <p>
+            Как и со строками, со списками можно работать с помощью срезов —
+            извлекать подсписки. Синтаксис: [начало:конец:шаг].
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+    <span class="perem">numbers</span> = [10, 20, 30, 40, 50, 60]
+    <span class="perem">print</span>(numbers[1:4])     # Элементы с индекса 1 до 4 (не включая 4)
+    <span class="perem">print</span>(numbers[::2])     # Каждый второй элемент (шаг 2)
+    <span class="perem">print</span>(numbers[::-1])    # Обратный порядок (шаг -1)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Срезы создают новый список, не изменяя
+            исходный. [1:4] берёт элементы с индексами 1, 2, 3 (индекс 4 не
+            включается). [::2] — начало и конец не указаны (берётся весь
+            список), шаг 2 означает, что берётся каждый второй элемент. [::-1] —
+            отрицательный шаг идёт в обратном направлении, полностью
+            переворачивая список. Это очень удобно без использования циклов.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">[20, 30, 40]</span>
+              <span class="output">[10, 30, 50]</span>
+              <span class="output">[60, 50, 40, 30, 20, 10]</span>
+                    </code></pre>
+          </div>
+
+          <p>Объединение и повторение списков</p>
+          <p>
+            Списки можно объединять с помощью оператора + (создаётся новый
+            список) и повторять с помощью * (умножение).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">list1</span> = [1, 2, 3]
+      <span class="perem">list2</span> = [4, 5, 6]
+      <span class="perem">combined</span> = list1 + list2   # Склеиваем два списка
+      <span class="perem">repeated</span> = list1 * 2       # Повторяем список 2 раза
+      <span class="perem">print</span>("Объединение:", combined)
+      <span class="perem">print</span>("Повторение:", repeated)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Оператор + создаёт новый список, содержащий
+            все элементы первого списка, затем все элементы второго. Исходные
+            списки не изменяются. Оператор * повторяет список указанное
+            количество раз. Обратите внимание: при умножении списка, содержащего
+            изменяемые объекты, могут возникнуть неожиданные эффекты (вложенные
+            списки будут копироваться по ссылке).
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Объединение: [1, 2, 3, 4, 5, 6]</span>
+              <span class="output">Повторение: [1, 2, 3, 1, 2, 3]</span>
+                    </code></pre>
+          </div>
+
+          <p>Полезные методы списков: sort, reverse, index, count</p>
+          <p>
+            Python предоставляет множество удобных методов для работы со
+            списками: сортировка, разворот, поиск индекса и подсчёт вхождений.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">numbers</span> = [3, 1, 4, 1, 5, 9, 2]
+      <span class="perem">numbers</span>.sort()                  # Сортировка по возрастанию
+      <span class="perem">print</span>("После sort():", numbers)
+      <span class="perem">numbers</span>.reverse()               # Разворот списка
+      <span class="perem">print</span>("После reverse():", numbers)
+      <span class="perem">print</span>("Количество единиц:", numbers.count(1))
+      <span class="perem">print</span>("Индекс числа 5:", numbers.index(5))
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> sort() изменяет исходный список, сортируя его
+            по возрастанию (можно добавить reverse=True для сортировки по
+            убыванию). reverse() переворачивает порядок элементов. count(1)
+            подсчитывает, сколько раз число 1 встречается в списке. index(5)
+            находит индекс первого вхождения числа 5. Если элемент не найден,
+            index() вызовет ошибку ValueError, поэтому лучше сначала проверить
+            наличие элемента с помощью in.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">После sort(): [1, 1, 2, 3, 4, 5, 9]</span>
+              <span class="output">После reverse(): [9, 5, 4, 3, 2, 1, 1]</span>
+              <span class="output">Количество единиц: 2</span>
+              <span class="output">Индекс числа 5: 1</span>
+                    </code></pre>
+          </div>
+
+          <p>Проверка наличия элемента и длина списка</p>
+          <p>
+            Оператор in проверяет, есть ли элемент в списке, а функция len()
+            возвращает длину списка (количество элементов).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">fruits</span> = ["яблоко", "банан", "апельсин"]
+      <span class="perem">print</span>("Есть ли банан?", "банан" in fruits)
+      <span class="perem">print</span>("Есть ли вишня?", "вишня" in fruits)
+      <span class="perem">print</span>("Длина списка:", len(fruits))
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Оператор in возвращает True, если элемент
+            присутствует в списке, и False в противном случае. Он очень удобен
+            для проверок перед удалением или поиском. len() возвращает
+            количество элементов в списке. Для списка из трёх элементов len()
+            вернёт 3. Важно: len() работает за O(1) — постоянное время, так как
+            длина хранится как отдельное значение.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Есть ли банан? True</span>
+              <span class="output">Есть ли вишня? False</span>
+              <span class="output">Длина списка: 3</span>
+                    </code></pre>
+          </div>
+
+          <p>Дополнительно: цикл по списку и генераторы списков</p>
+          <p>
+            Списки удобно перебирать с помощью цикла for, а создавать — с
+            помощью генераторов списков (list comprehensions).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">fruits</span> = ["яблоко", "банан", "апельсин"]
+      <span class="perem">for</span> fruit <span class="perem">in</span> fruits:
+          <span class="perem">print</span>(fruit.upper())
+      
+      <span class="perem">squares</span> = [x**2 <span class="perem">for</span> x <span class="perem">in</span> range(5)]
+      <span class="perem">print</span>("Квадраты чисел:", squares)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Цикл for перебирает каждый элемент списка по
+            очереди. В примере каждый фрукт выводится в верхнем регистре.
+            Генератор списка [x**2 for x in range(5)] создаёт новый список, где
+            каждый элемент — это квадрат числа от 0 до 4. Генераторы списков —
+            это более краткий и часто более быстрый способ создания списков по
+            сравнению с циклом for и append().
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">ЯБЛОКО</span>
+              <span class="output">БАНАН</span>
+              <span class="output">АПЕЛЬСИН</span>
+              <span class="output">Квадраты чисел: [0, 1, 4, 9, 16]</span>
+                    </code></pre>
+          </div>
+        </div>
+      </article>
+
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Как создать список в Python?",
+          options: ["list()", "[]", "[1, 2, 3]", "Все варианты верны"],
+          answer: 3,
+        },
+        {
+          q: "Как получить доступ к первому элементу списка fruits = ['яблоко', 'банан', 'апельсин']?",
+          options: ["fruits[0]", "fruits[1]", "fruits.first()", "fruits[-1]"],
+          answer: 0,
+        },
+        {
+          q: "Какой метод добавляет элемент в конец списка?",
+          options: ["insert()", "add()", "append()", "push()"],
+          answer: 2,
+        },
+        {
+          q: "Что вернет код: numbers = [1, 2, 3, 4, 5]; numbers[2] = 10; print(numbers)?",
+          options: [
+            "[1, 2, 10, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 10, 5]",
+            "Ошибку",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Как удалить элемент из списка по значению?",
+          options: ["pop()", "remove()", "delete()", "del()"],
+          answer: 1,
+        },
+        {
+          q: "Что вернет код: nums = [10, 20, 30, 40, 50]; print(nums[1:4])?",
+          options: [
+            "[10, 20, 30]",
+            "[20, 30, 40]",
+            "[30, 40, 50]",
+            "[10, 20, 30, 40]",
+          ],
+          answer: 1,
+        },
+        {
+          q: "Как объединить два списка list1 и list2?",
+          options: [
+            "list1.join(list2)",
+            "list1 + list2",
+            "list1.append(list2)",
+            "list1.extend(list1, list2)",
+          ],
+          answer: 1,
+        },
+        {
+          q: "Какой метод сортирует список по возрастанию?",
+          options: ["sort()", "sorted()", "order()", "asc()"],
+          answer: 0,
+        },
+        {
+          q: "Что вернет код: fruits = ['яблоко', 'банан', 'апельсин']; print(len(fruits))?",
+          options: ["2", "3", "4", "Ошибку"],
+          answer: 1,
+        },
+        {
+          q: "Как проверить, есть ли элемент в списке?",
+          options: [
+            "list.contains(element)",
+            "element in list",
+            "list.has(element)",
+            "list.find(element)",
+          ],
+          answer: 1,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+      <p>${idx + 1}. ${item.q}</p>
+      ${item.options
+        .map(
+          (opt, i) => `
+          <label>
+              <input type='radio' name='q${idx}' value='${i}'> ${opt}
+          </label><br>`
+        )
+        .join("")}
+      `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("Функции", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

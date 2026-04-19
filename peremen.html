@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Переменные</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main-topic">
+      <div class="b2">
+        <h1>Переменные</h1>
+        <p class="text-style">А также типы данных</p>
+      </div>
+      <h1 class="topic-title">Переменные</h1>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              <span class="mark">Данные — это основа любой программы.</span> Именно через данные
+              происходит общение: между пользователем и приложением, а также
+              между разными программами. Без них приложение просто <span class="mark">не будет
+              работать</span> и <span class="mark">станет бесполезным</span>.Например, для передачи данных по
+              сети используются переменные.
+            </p>
+            <p>
+              Идея переменных пришла из раздела математики — алгебры. Там
+              переменные нужны, чтобы обозначать неизвестные или меняющиеся
+              величины. Поэтому это понятие — не изобретение языка Python. С
+              самого начала эры высокоуровневых языков программирования
+              переменные стали использовать, чтобы хранить данные в определённой
+              ячейке памяти компьютера. Первые программисты столкнулись с
+              трудностью: им было неудобно постоянно обращаться к данным,
+              используя числовой адрес в памяти. Чтобы решить эту проблему, они
+              взяли концепцию переменных из алгебры. Это позволило сохранять
+              значения в памяти и легко использовать их в нужный момент.
+            </p>
+          </div>
+        </section>
+      </article>
+      <div class="note">
+        <p>
+          Чтобы программа Python работала так, как планировал разработчик, ей
+          необходимы основные структурные блоки — переменные и операторы. Они
+          помогают начинающим программистам понять логику сложных программных
+          продуктов.
+        </p>
+      </div>
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Возьмем математическое выражение 2x + 3y. <br />
+              1. Если x = 3 и y = 4, то результат выражения равен 18. <br />
+              2. Если x = 2 и y = 6, то результат выражения равен 22.
+            </p>
+          </div>
+          <div class="b2">
+            <p>
+              Аналогичным образом <span class="mark">вывод программы зависит от значения
+              переменной</span>, которое можно легко изменить. Если значение какой-то
+              переменной не должно изменяться во время выполнения программы, в
+              терминологии программирования такая переменная называется
+              константой.
+            </p>
+            <p>
+              Чтобы понять, как работают переменные, необходимо сначала понять,
+              как происходит выполнение программ Python. Чтобы объяснение стало
+              более наглядным, я воспользуюсь командой <span class="mark">print</span>.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block"
+              ><p class="code-title">Программный код:</p><code>
+            <span class="keyword">print</span>("This is a sample analysis.")
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre class="code-block"><p class="code-title">Вывод:</p><code>
+            <span class="output">This is a sample analysis.</span>
+        </code></pre>
+            </div>
+            <p>
+              В этом примере при выполнении команды <span class="mark">print</span> результат немедленно
+              <span class="mark">выводится на экран</span>, но, кроме того, происходят многие вещи,
+              которые остаются незаметными для пользователя.
+            </p>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Как работает код</h3>
+            <ul class="section-list">
+              <li>
+                При первоначальном выполнении программы интерпретатор читает
+                каждую строку и сопоставляет ее с доступными для него
+                библиотеками.
+              </li>
+              <li>
+                Интерпретатор выполняет этот процесс сопоставления достаточно
+                продуманно. Он не только определяет, что представляет собой
+                каждый символ программы, но и анализирует информацию о
+                переменных и читает данные, хранящиеся в соответствующей ячейке
+                памяти, для проверки программной логики
+              </li>
+              <li>
+                Если даже после сложного разбора и анализа кода интерпретатору
+                не удается найти определенные методы или переменные, программа
+                выдает ошибки или исключения.
+              </li>
+              <li>
+                В приведенном выше примере при разборе команды print
+                интерпретатор немедленно узнает, что речь идет об одном из
+                основных методов, определенных в библиотеке Python, и выводит на
+                экран строковый литерал, который был заключен в круглые скобки.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Если вы в полной мере понимаете вышеприведенное объяснение, можно
+              переходить к использованию переменных в Python.Для создания
+              переменной используется оператор =.После этого при выполнении кода
+              print() или других операций на место имени переменной будет
+              подставлено её значение:
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block  hei-block3"
+              ><p class="code-title">Программный код:</p><code>
+            <span class="perem">program</span> = "This is a sample analysis." <br>
+            <span class="keyword">print</span>(program)
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block  hei-block3"
+              ><p class="code-title">Вывод:</p><code>
+            <span class="output">This is a sample analysis.</span>
+        </code></pre>
+            </div>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Как работает код</h3>
+            <ul class="section-list">
+              <li>
+                При запуске программы интерпретатор обычно разбирает все строки
+                кода, написанные программистом.
+              </li>
+              <li>
+                Вместо команды print, за которой следует блок текста,
+                интерпретатор теперь видит идентификатор — переменную с именем
+                program. Интерпретатор просматривает предшествующий код и видит,
+                что переменная уже инициализирована некоторым текстом и хранится
+                в определенной ячейке памяти
+              </li>
+              <li>
+                Интерпретатор выводит переменную на экран, как того требует
+                программист. Для этого он читает данные, хранящиеся в
+                переменной.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Все переменные работают по этой базовой схеме, даже если они
+              используются в сложной программной логике.
+            </p>
+          </div>
+          <div class="b2">
+            <p>
+              Значение переменной можно легко изменить. Этот факт очень важен
+              для программистов Python, потому что все динамические программы
+              изменяют значения своих переменных в соответствии с данными,
+              введенными пользователем, и это может происходить даже
+              непосредственно во время выполнения программы
+            </p>
+
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+            <span class="perem">sample</span> = "This is an example" <br>
+            <span class="keyword">print</span>(sample) <br> 
+            <span class="perem">sample</span> = "This is a second example" <br>
+            <span class="keyword">print</span>(sample)
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+            <span class="output">This is an example</span> <br> 
+            <span class="output">This is a second example</span>
+        </code></pre>
+            </div>
+            <p>
+              Мы знаем, что интерпретатор Python обрабатывает код
+              последовательно, строку за строкой, соответственно первая команда
+              выводит результат с первым значением переменной, а вторая — со
+              вторым.
+            </p>
+          </div>
+        </section>
+      </article>
+      <h1 class="topic-title">Выбор имен переменных</h1>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              При создании переменных все Python-разработчики должны соблюдать
+              основные правила, сформулированные сообществом Python. Если вы
+              откажетесь от соблюдения этих правил, в программе могут возникнуть
+              ошибки, а приложение может неожиданно завершиться. Кроме того,
+              соблюдение правил при написании программ может упростить чтение
+              кода
+            </p>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Правила</h3>
+            <ul class="section-list">
+              <li>
+                Согласно правилам Python, имена переменных могут содержать
+                только цифры, алфавитные символы и символы подчеркивания.
+                Например, строка sample1 может использоваться как имя
+                переменной, а строка $sample1 именем переменной быть не может,
+                потому что она начинается с запрещенного символа.
+              </li>
+              <li>
+                Имя переменной в языке Python не может начинаться с цифры.
+                Например, строка sample1 соответствует формату имен переменных,
+                а строка 1sample именем переменной быть не может.
+              </li>
+              <li>
+                В качестве имен переменных запрещено использовать
+                зарезервированные слова, предназначенные для выполнения
+                различных программных процедур в коде Python. В настоящее время
+                существует около 30 таких ключевых слов, например, к ним
+                относится for.
+              </li>
+              <li>
+                Хотя это не является жестким требованием, для лучшей читаемости
+                рекомендуется отдавать предпочтение присвоению переменным
+                простых имен. Сложные или запутанные имена загромождают код.
+                Хотя практика длинных имен хорошо подходит для таких
+                высокоуровневых языков, как C, C++ и Perl, язык Python не
+                разделяет эту философию.
+              </li>
+              <li>
+                Python — регистрозависимый язык, что означает различие между
+                прописными и строчными буквами в именах переменных. Переменные
+                name, Name и NAME интерпретируются как три разные переменные:
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+      <h1 class="topic-title">Типы данных</h1>
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Типы данных представляют собой заранее определенные интервалы
+              значений, используемые программистами при создании переменных.
+              Важно помнить, что Python не является языком со статической
+              типизацией, поэтому разработчик не обязан явно определять типы
+              данных при создании переменных. Все языки со статической
+              типизацией — такие как C или C++ — обычно требуют от программистов
+              определять типы данных, хранящихся в переменных.
+            </p>
+          </div>
+          <div class="b2">
+            <p>
+              Хотя в Python определять тип данных не обязательно, все же для
+              построения сложных программ, активно взаимодействующих с
+              пользователем, необходимо разбираться в них.
+            </p>
+          </div>
+          <div class="note">
+            <p>
+              Python-разработчики обычно используют разные типы данных в
+              зависимости от задачи. Программист должен понимать, насколько
+              важна эта тема для процесса разработки
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <table class="table-per">
+        <thead>
+          <tr>
+            <th>Категория</th>
+            <th>Типы данных</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>int</td>
+            <td>целочисленные числа</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>float</td>
+            <td>любые числа с дробной частью</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>str</td>
+            <td>любые символы</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>bool</td>
+            <td>True и False</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Какой из этих вариантов является корректным именем переменной в Python?",
+          options: ["1st_var", "my-var", "_myvar", "global"],
+          answer: 2,
+        },
+        {
+          q: "Что выведет код: x = 5; y = x; x = 10; print(y)?",
+          options: ["5", "10", "Ошибку", "None"],
+          answer: 0,
+        },
+        {
+          q: "Какой тип данных будет у переменной: value = 3.14?",
+          options: ["int", "str", "float", "double"],
+          answer: 2,
+        },
+        {
+          q: "Что произойдет при выполнении: a, b, c = 1, 2, 3?",
+          options: [
+            "Ошибка",
+            "Создаст список",
+            "Множественное присваивание",
+            "Создаст кортеж",
+          ],
+          answer: 2,
+        },
+        {
+          q: "Как правильно объявить константу в Python?",
+          options: [
+            "const MAX_SIZE = 100",
+            "final MAX_SIZE = 100",
+            "MAX_SIZE = 100",
+            "#define MAX_SIZE 100",
+          ],
+          answer: 2,
+        },
+        {
+          q: "Что выведет код: name = 'Python'; print(name * 2)?",
+          options: ["PythonPython", "Python2", "Ошибку", "Python Python"],
+          answer: 0,
+        },
+        {
+          q: "Какая переменная удалится после del? x = 5; y = x; del x",
+          options: ["Только x", "Только y", "Обе переменные", "Ни одна"],
+          answer: 0,
+        },
+        {
+          q: "Что такое динамическая типизация?",
+          options: [
+            "Тип переменной задается при компиляции",
+            "Тип переменной можно менять",
+            "Тип переменной определяется автоматически",
+            "Переменные без типа",
+          ],
+          answer: 2,
+        },
+        {
+          q: "Что выведет код: a = '10'; b = 5; print(a + str(b))?",
+          options: ["15", "105", "Ошибку", "1010"],
+          answer: 1,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+        <p>${idx + 1}. ${item.q}</p>
+        ${item.options
+          .map(
+            (opt, i) => `
+            <label>
+                <input type='radio' name='q${idx}' value='${i}'> ${opt}
+            </label><br>`
+          )
+          .join("")}
+        `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("test1", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Словари</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <!DOCTYPE html>
+        <html lang="ru">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="icon" href="images\pythonicon.jpg" />
+            <title>Стили письма</title>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <header class="stile-header">
+              <div class="container">
+                <h1>Python учебник</h1>
+                <nav class="nav2">
+                  <a href="index.html">Главная</a>
+                  <a href="progress.html">Прогресс</a>
+                  <a href="test.html">Контрольный тест</a>
+                </nav>
+              </div>
+            </header>
+            <div class="b2">
+              <h1>Словари</h1>
+            </div>
+            <main class="main-topic">
+              <article class="subsection">
+                <h2 class="subtitle">Что такое словарь в Python?</h2>
+                <section class="section">
+                  <div class="b2">
+                    <p>
+                      Словари (тип dict) — это неупорядоченные изменяемые
+                      коллекции, которые хранят данные в формате
+                      <strong>ключ: значение</strong>. В отличие от списков, где
+                      доступ к элементу осуществляется по индексу (числу), в
+                      словарях доступ идёт по ключу, который может быть любым
+                      неизменяемым типом (строки, числа, кортежи). Словари
+                      невероятно полезны для быстрого поиска, группировки данных
+                      и представления структурированной информации.
+                    </p>
+                  </div>
+                </section>
+                <div class="b2">
+                  <h1>Основные операции со словарями:</h1>
+                  <p>
+                    Теперь, когда мы знаем, что такое словари, давайте научимся
+                    с ними работать. Python предлагает множество удобных
+                    операций для манипуляции словарями.
+                  </p>
+
+                  <p>Создание словаря и доступ к значениям</p>
+                  <p>
+                    Словари создаются с помощью фигурных скобок {} с парами
+                    ключ: значение, разделёнными запятыми. Доступ к значениям
+                    осуществляется по ключу с помощью квадратных скобок [] или
+                    метода get().
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {
+                  "name": "Иван",
+                  "age": 25,
+                  "city": "Москва"
+              }
+              <span class="perem">print</span>(person["name"])      # Доступ по ключу
+              <span class="perem">print</span>(person.get("age"))   # Безопасный доступ через get()
+              <span class="perem">print</span>(person.get("country", "Не указано"))  # Значение по умолчанию
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> Словарь person хранит информацию о
+                    человеке. Обращение person["name"] возвращает значение по
+                    ключу "name" — "Иван". Если ключа нет, возникнет ошибка
+                    KeyError. Метод get() безопаснее: он возвращает None (или
+                    указанное значение по умолчанию), если ключ отсутствует. В
+                    третьем примере ключа "country" нет, поэтому возвращается
+                    "Не указано".
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Иван</span>
+                      <span class="output">25</span>
+                      <span class="output">Не указано</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Добавление и изменение элементов</p>
+                  <p>
+                    Словари изменяемы: можно добавлять новые пары или изменять
+                    существующие, просто присваивая значение по ключу.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25}
+              <span class="perem">person</span>["city"] = "Москва"        # Добавляем новую пару
+              <span class="perem">person</span>["age"] = 26              # Изменяем существующее значение
+              <span class="perem">print</span>(person)
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> Если ключа "city" в словаре нет, он
+                    создаётся с указанным значением. Если ключ "age" уже
+                    существует, его значение перезаписывается. Это одна из
+                    главных особенностей словарей — они динамически расширяются
+                    и позволяют легко обновлять данные.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">{'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Удаление элементов (pop, popitem и del)</p>
+                  <p>
+                    pop() удаляет элемент по ключу и возвращает его значение,
+                    popitem() удаляет и возвращает последнюю добавленную пару (в
+                    Python 3.7+), del удаляет элемент по ключу.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва", "job": "инженер"}
+              
+              <span class="perem">age</span> = person.pop("age")           # Удаляем по ключу, получаем значение
+              <span class="perem">last_item</span> = person.popitem()      # Удаляем последнюю добавленную пару
+              <span class="perem">del</span> person["city"]                # Удаляем по ключу (значение не возвращается)
+              
+              <span class="perem">print</span>("Удаленный возраст:", age)
+              <span class="perem">print</span>("Последняя удалённая пара:", last_item)
+              <span class="perem">print</span>("Оставшийся словарь:", person)
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> pop("age") удаляет пару с ключом
+                    "age" и возвращает значение 25. popitem() удаляет и
+                    возвращает последнюю добавленную пару (в Python 3.7+ словари
+                    сохраняют порядок вставки). del просто удаляет элемент, не
+                    возвращая значение. Если ключа нет, pop() вызовет ошибку, а
+                    del — тоже. Используйте pop() с вторым аргументом (например,
+                    pop("key", None)), чтобы избежать ошибки.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Удаленный возраст: 25</span>
+                      <span class="output">Последняя удалённая пара: ('job', 'инженер')</span>
+                      <span class="output">Оставшийся словарь: {'name': 'Иван'}</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Перебор словаря (keys, values, items)</p>
+                  <p>
+                    Для перебора словаря используются методы keys() (ключи),
+                    values() (значения) и items() (пары ключ-значение).
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
+              
+              <span class="perem">print</span>("Ключи:")
+              <span class="perem">for</span> key <span class="perem">in</span> person.keys():
+                  <span class="perem">print</span>(f"  {key}")
+              
+              <span class="perem">print</span>("Значения:")
+              <span class="perem">for</span> value <span class="perem">in</span> person.values():
+                  <span class="perem">print</span>(f"  {value}")
+              
+              <span class="perem">print</span>("Пары ключ-значение:")
+              <span class="perem">for</span> key, value <span class="perem">in</span> person.items():
+                  <span class="perem">print</span>(f"  {key}: {value}")
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> keys() возвращает все ключи, values()
+                    — все значения, items() — кортежи (ключ, значение). Метод
+                    items() особенно удобен, так как позволяет в цикле сразу
+                    получить и ключ, и значение. В Python 3.7+ порядок перебора
+                    соответствует порядку добавления элементов в словарь.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Ключи:</span>
+                      <span class="output">  name</span>
+                      <span class="output">  age</span>
+                      <span class="output">  city</span>
+                      <span class="output">Значения:</span>
+                      <span class="output">  Иван</span>
+                      <span class="output">  25</span>
+                      <span class="output">  Москва</span>
+                      <span class="output">Пары ключ-значение:</span>
+                      <span class="output">  name: Иван</span>
+                      <span class="output">  age: 25</span>
+                      <span class="output">  city: Москва</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Проверка наличия ключа (in)</p>
+                  <p>
+                    Оператор in проверяет, есть ли ключ в словаре. Это очень
+                    быстрая операция (O(1) — постоянное время).
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
+              
+              <span class="perem">if</span> "name" <span class="perem">in</span> person:
+                  <span class="perem">print</span>("Ключ 'name' существует!")
+                  <span class="perem">print</span>(f"Его значение: {person['name']}")
+              
+              <span class="perem">if</span> "country" <span class="perem">not in</span> person:
+                  <span class="perem">print</span>("Ключа 'country' нет в словаре")
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> Оператор in проверяет наличие ключа,
+                    а не значения. Это очень эффективно, так как словари
+                    используют хэш-таблицы для мгновенного поиска. Всегда
+                    используйте in перед прямым доступом person["key"], если не
+                    уверены в существовании ключа, чтобы избежать ошибки
+                    KeyError.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Ключ 'name' существует!</span>
+                      <span class="output">Его значение: Иван</span>
+                      <span class="output">Ключа 'country' нет в словаре</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Методы update и setdefault</p>
+                  <p>
+                    update() объединяет словари (добавляет или обновляет пары),
+                    setdefault() возвращает значение по ключу, а если ключа нет
+                    — создаёт его с указанным значением.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25}
+              <span class="perem">new_data</span> = {"age": 26, "city": "Москва"}
+              
+              <span class="perem">person</span>.update(new_data)      # Обновляем/добавляем данные
+              <span class="perem">print</span>("После update():", person)
+              
+              <span class="perem">country</span> = person.setdefault("country", "Россия")
+              <span class="perem">print</span>("Значение country:", country)
+              <span class="perem">print</span>("После setdefault():", person)
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> update() добавляет все пары из
+                    new_data в person. Ключ "age" обновляется, ключ "city"
+                    добавляется. setdefault("country", "Россия") проверяет: если
+                    ключа "country" нет, он создаётся со значением "Россия", и
+                    это значение возвращается. Если ключ уже существует, метод
+                    просто вернёт его значение, ничего не изменяя.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">После update(): {'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
+                      <span class="output">Значение country: Россия</span>
+                      <span class="output">После setdefault(): {'name': 'Иван', 'age': 26, 'city': 'Москва', 'country': 'Россия'}</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Длина словаря (len) и очистка (clear)</p>
+                  <p>
+                    len() возвращает количество пар ключ-значение в словаре,
+                    clear() удаляет все элементы.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
+              <span class="perem">print</span>(f"Количество элементов: {len(person)}")
+              
+              <span class="perem">person</span>.clear()
+              <span class="perem">print</span>(f"После очистки: {person}")
+              <span class="perem">print</span>(f"Длина после очистки: {len(person)}")
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> len() возвращает количество пар в
+                    словаре. clear() удаляет все элементы, превращая словарь в
+                    пустой {}. После очистки len() вернёт 0. clear() полезен,
+                    когда нужно переиспользовать переменную словаря, но удалить
+                    все старые данные.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Количество элементов: 3</span>
+                      <span class="output">После очистки: {}</span>
+                      <span class="output">Длина после очистки: 0</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Вложенные словари</p>
+                  <p>
+                    Словари могут содержать другие словари, списки и любые
+                    другие структуры данных, создавая сложные иерархические
+                    структуры.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">students</span> = {
+                  "student1": {
+                      "name": "Иван",
+                      "grades": [5, 4, 5, 3]
+                  },
+                  "student2": {
+                      "name": "Мария",
+                      "grades": [5, 5, 5, 4]
+                  }
+              }
+              
+              <span class="perem">print</span>(students["student1"]["name"])
+              <span class="perem">print</span>(students["student2"]["grades"])
+              <span class="perem">avg_grade</span> = sum(students["student2"]["grades"]) / len(students["student2"]["grades"])
+              <span class="perem">print</span>(f"Средний балл Марии: {avg_grade}")
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> Вложенные словари позволяют создавать
+                    сложные структуры данных. Здесь словарь students содержит
+                    двух студентов, каждый из которых — отдельный словарь с
+                    именем и списком оценок. Доступ к вложенным данным
+                    осуществляется последовательным указанием ключей. Это очень
+                    похоже на работу с JSON — популярным форматом обмена
+                    данными.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Иван</span>
+                      <span class="output">[5, 5, 5, 4]</span>
+                      <span class="output">Средний балл Марии: 4.75</span>
+                            </code></pre>
+                  </div>
+
+                  <p>Генераторы словарей (dict comprehensions)</p>
+                  <p>
+                    Как и для списков, для словарей существуют генераторы —
+                    компактный способ создания словарей из итерируемых объектов.
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Программный код:</p><code>
+              <span class="perem">squares</span> = {x: x**2 <span class="perem">for</span> x <span class="perem">in</span> range(5)}
+              <span class="perem">print</span>("Квадраты чисел:", squares)
+              
+              <span class="perem">fruits</span> = ["яблоко", "банан", "апельсин"]
+              <span class="perem">fruit_lengths</span> = {fruit: len(fruit) <span class="perem">for</span> fruit <span class="perem">in</span> fruits}
+              <span class="perem">print</span>("Длина слов:", fruit_lengths)
+              
+              <span class="perem">even_squares</span> = {x: x**2 <span class="perem">for</span> x <span class="perem">in</span> range(10) <span class="perem">if</span> x % 2 == 0}
+              <span class="perem">print</span>("Квадраты чётных чисел:", even_squares)
+                            </code></pre>
+                  </div>
+                  <p>
+                    <em>📝 Пояснение:</em> Генераторы словарей имеют синтаксис
+                    {ключ: значение for элемент in последовательность}. В первом
+                    примере числа от 0 до 4 становятся ключами, а их квадраты —
+                    значениями. Во втором — фрукты становятся ключами, а длины
+                    названий — значениями. В третьем — добавляется условие if,
+                    чтобы включить только чётные числа. Генераторы делают код
+                    короче и часто более читаемым.
+                  </p>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block2"
+                    ><p class="code-title">Вывод:</p><code>
+                      <span class="output">Квадраты чисел: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}</span>
+                      <span class="output">Длина слов: {'яблоко': 6, 'банан': 5, 'апельсин': 8}</span>
+                      <span class="output">Квадраты чётных чисел: {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}</span>
+                            </code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+              <div class="modal" id="quizModal">
+                <div class="modal-dialog">
+                  <button class="modal-close" id="closeQuizBtn">x</button>
+                  <h2 id="quizTitle">Мини-тест по основам Python</h2>
+                  <p class="modal-desc">
+                    Ответьте на все вопросы, затем нажмите "Проверить"
+                  </p>
+                  <form id="quizForm" class="quiz">
+                    <div id="quizQuestions"></div>
+                    <div class="quiz-actions">
+                      <button
+                        type="button"
+                        id="checkQuizBtn"
+                        class="quiz-action-btn quiz-primary"
+                      >
+                        Проверить
+                      </button>
+                      <button
+                        type="button"
+                        id="resetQuizBtn"
+                        class="quiz-action-btn quiz-ghost"
+                      >
+                        сбросить
+                      </button>
+                    </div>
+                    <div id="quizResult" class="quiz-result"></div>
+                  </form>
+                </div>
+              </div>
+            </main>
+
+            <script>
+              function saveProgress(testId, score, total) {
+                const progress =
+                  JSON.parse(localStorage.getItem("progress")) || {};
+                progress[testId] = { score, total };
+                localStorage.setItem("progress", JSON.stringify(progress));
+              }
+              const QUESTIONS = [
+                {
+                  q: "Как создать пустой словарь?",
+                  options: ["{}", "[]", "set()", "()"],
+                  answer: 0,
+                },
+                {
+                  q: "Что вернет код: d = {'a': 1, 'b': 2}; print(d['a'])?",
+                  options: ["1", "2", "'a'", "Ошибку"],
+                  answer: 0,
+                },
+                {
+                  q: "Как добавить новую пару ключ-значение в словарь?",
+                  options: [
+                    "d.add('key', 'value')",
+                    "d['key'] = 'value'",
+                    "d.insert('key', 'value')",
+                    "d.append('key', 'value')",
+                  ],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет метод d.get('key') если ключа нет в словаре?",
+                  options: ["Ошибку", "None", "False", "0"],
+                  answer: 1,
+                },
+                {
+                  q: "Как получить все ключи словаря?",
+                  options: ["d.keys()", "d.keys", "d.all_keys()", "d.items()"],
+                  answer: 0,
+                },
+                {
+                  q: "Что выведет код: d = {1: 'one', 2: 'two'}; print(1 in d)?",
+                  options: ["True", "False", "one", "Ошибку"],
+                  answer: 0,
+                },
+                {
+                  q: "Как удалить элемент из словаря по ключу?",
+                  options: [
+                    "d.remove('key')",
+                    "del d['key']",
+                    "d.delete('key')",
+                    "d.pop('key')",
+                  ],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: d = {'a': 1, 'b': 2}; d.pop('a'); print(d)?",
+                  options: ["{'a': 1, 'b': 2}", "{'b': 2}", "{}", "Ошибку"],
+                  answer: 1,
+                },
+                {
+                  q: "Какой метод объединяет два словаря?",
+                  options: ["merge()", "update()", "join()", "combine()"],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: d = {'a': 1, 'b': 2, 'c': 3}; print(len(d))?",
+                  options: ["2", "3", "4", "Ошибку"],
+                  answer: 1,
+                },
+                {
+                  q: "Как получить все пары ключ-значение в виде кортежей?",
+                  options: ["d.keys()", "d.values()", "d.items()", "d.pairs()"],
+                  answer: 2,
+                },
+                {
+                  q: "Что делает метод setdefault() в словаре?",
+                  options: [
+                    "Удаляет элемент по умолчанию",
+                    "Возвращает значение по ключу или создает его с значением по умолчанию",
+                    "Устанавливает значение по умолчанию для всех ключей",
+                    "Сбрасывает словарь",
+                  ],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: d = {'a': 1, 'b': 2}; print(d.get('c', 0))?",
+                  options: ["None", "0", "Ошибку", "False"],
+                  answer: 1,
+                },
+                {
+                  q: "Какой тип данных может быть ключом в словаре?",
+                  options: [
+                    "Любой изменяемый тип",
+                    "Любой неизменяемый тип (строки, числа, кортежи)",
+                    "Только строки",
+                    "Только числа",
+                  ],
+                  answer: 1,
+                },
+                {
+                  q: "Как создать словарь с помощью генератора?",
+                  options: [
+                    "{x: x**2 for x in range(5)}",
+                    "[x: x**2 for x in range(5)]",
+                    "dict(x: x**2 for x in range(5))",
+                    "{x**2 for x in range(5)}",
+                  ],
+                  answer: 0,
+                },
+              ];
+
+              const modal = document.getElementById("quizModal");
+              const openBtn = document.getElementById("openQuizBtn");
+              const closeBtn = document.getElementById("closeQuizBtn");
+              const questionsContainer =
+                document.getElementById("quizQuestions");
+              const checkBtn = document.getElementById("checkQuizBtn");
+              const resetBtn = document.getElementById("resetQuizBtn");
+              const resultBox = document.getElementById("quizResult");
+
+              function renderQuestions() {
+                questionsContainer.innerHTML = "";
+                QUESTIONS.forEach((item, idx) => {
+                  const block = document.createElement("div");
+                  block.className = "quiz-question";
+                  block.innerHTML = `
+        <p>${idx + 1}. ${item.q}</p>
+        ${item.options
+          .map(
+            (opt, i) => `
+            <label>
+                <input type='radio' name='q${idx}' value='${i}'> ${opt}
+            </label><br>`
+          )
+          .join("")}
+        `;
+                  questionsContainer.appendChild(block);
+                });
+              }
+              function checkAnswers() {
+                let correct = 0;
+                QUESTIONS.forEach((q, idx) => {
+                  const chosen = document.querySelector(
+                    `input[name="q${idx}"]:checked`
+                  );
+                  if (chosen && Number(chosen.value) == q.answer) {
+                    correct++;
+                  }
+                });
+                resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+                saveProgress("Словари", correct, QUESTIONS.length);
+              }
+              function resetQuiz() {
+                document.getElementById("quizForm").reset();
+                resultBox.textContent = "";
+              }
+              openBtn.onclick = () => {
+                renderQuestions();
+                modal.classList.add("show");
+              };
+
+              closeBtn.onclick = () => {
+                modal.classList.remove("show");
+              };
+
+              checkBtn.onclick = checkAnswers;
+
+              reset.onclick = resetQuiz;
+            </script>
+          </body>
+        </html>
+      </head>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прогресс обучения</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+
+    <h1>Прогресс</h1>
+    <table id="progressTable" class="table-per">
+      <tr>
+        <th>Тест</th>
+        <th>Результат</th>
+      </tr>
+    </table>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <script>
+      const progress = JSON.parse(localStorage.getItem("progress")) || {};
+      const table = document.getElementById("progressTable");
+      const fill = document.getElementById("progressFill");
+
+      // const totalTests = Object.keys(progress).length;
+      const totalTests = 13;
+      let passed = 0;
+      Object.keys(progress).forEach((testId) => {
+        const { score, total } = progress[testId];
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${testId}</td><td>${score}/ ${total}</td>`;
+        table.appendChild(row);
+        if (score == total) {
+          passed++;
+        }
+      });
+      const percent = totalTests ? Math.round((passed / totalTests) * 100) : 0;
+      fill.style.width = percent + "%";
+    </script>
+  </body>
+</html>

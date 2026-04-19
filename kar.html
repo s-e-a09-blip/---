@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Кортежи в Python</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <div class="b2">
+      <h1>Кортежи</h1>
+    </div>
+    <main class="main-topic">
+      <article class="subsection">
+        <h2 class="subtitle">Что такое кортеж в Python?</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Кортежи (тип tuple) — это упорядоченные
+              <strong>неизменяемые</strong> коллекции, которые могут хранить
+              элементы любых типов. Кортежи очень похожи на списки, но их
+              главное отличие — они не могут быть изменены после создания.
+              Кортежи создаются с помощью круглых скобок () и часто используются
+              для хранения связанных данных, которые не должны меняться
+              (например, координаты точки, RGB-цвета, даты).
+            </p>
+            <p>
+              <strong>💡 Важно:</strong> Неизменяемость кортежей делает их
+              безопасными для использования в качестве ключей словаря и более
+              эффективными по памяти по сравнению со списками.
+            </p>
+          </div>
+        </section>
+        <div class="b2">
+          <h1>Основные операции с кортежами:</h1>
+          <p>
+            Теперь, когда мы знаем, что такое кортежи, давайте научимся с ними
+            работать. Python предлагает множество операций для работы с
+            кортежами, похожих на операции со списками.
+          </p>
+
+          <p>Создание кортежа</p>
+          <p>
+            Кортежи создаются с помощью круглых скобок (). Для создания кортежа
+            из одного элемента нужна запятая после элемента.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">empty_tuple</span> = ()                      # Пустой кортеж
+      <span class="perem">point</span> = (10, 20)                    # Кортеж из двух элементов
+      <span class="perem">colors</span> = ("красный", "зеленый", "синий")  # Кортеж из трёх элементов
+      <span class="perem">single_element</span> = (5,)                # Кортеж из одного элемента (важно!)
+      <span class="perem">not_tuple</span> = (5)                     # Это просто число 5, а не кортеж!
+      
+      <span class="perem">print</span>("Пустой кортеж:", empty_tuple)
+      <span class="perem">print</span>("Точка:", point)
+      <span class="perem">print</span>("Цвета:", colors)
+      <span class="perem">print</span>("Кортеж из одного элемента:", single_element)
+      <span class="perem">print</span>("Тип (5):", type(not_tuple))
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Кортежи создаются с помощью круглых скобок.
+            Особое внимание обратите на создание кортежа из одного элемента —
+            нужна запятая после элемента (5,). Без запятой (5) — это просто
+            число int. Пустой кортеж создаётся как (). Кортежи могут содержать
+            элементы разных типов.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Пустой кортеж: ()</span>
+              <span class="output">Точка: (10, 20)</span>
+              <span class="output">Цвета: ('красный', 'зеленый', 'синий')</span>
+              <span class="output">Кортеж из одного элемента: (5,)</span>
+              <span class="output">Тип (5): &lt;class 'int'&gt;</span>
+                    </code></pre>
+          </div>
+
+          <p>Доступ к элементам кортежа</p>
+          <p>
+            Доступ к элементам кортежа осуществляется по индексу (начиная с 0),
+            как в списках. Отрицательные индексы отсчитываются с конца.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">point</span> = (10, 20, 30, 40, 50)
+      <span class="perem">print</span>("Первый элемент (индекс 0):", point[0])
+      <span class="perem">print</span>("Второй элемент (индекс 1):", point[1])
+      <span class="perem">print</span>("Последний элемент (индекс -1):", point[-1])
+      <span class="perem">print</span>("Предпоследний элемент (индекс -2):", point[-2])
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Как и в списках, доступ к элементам кортежа
+            происходит по индексу в квадратных скобках. Индексация начинается с
+            0. Отрицательные индексы позволяют обращаться к элементам с конца:
+            -1 — последний элемент, -2 — предпоследний и так далее.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Первый элемент (индекс 0): 10</span>
+              <span class="output">Второй элемент (индекс 1): 20</span>
+              <span class="output">Последний элемент (индекс -1): 50</span>
+              <span class="output">Предпоследний элемент (индекс -2): 40</span>
+                    </code></pre>
+          </div>
+
+          <p>Неизменяемость кортежей</p>
+          <p>
+            Кортежи нельзя изменять после создания — это их главное отличие от
+            списков.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">my_tuple</span> = (1, 2, 3, 4, 5)
+      <span class="perem">print</span>("Исходный кортеж:", my_tuple)
+      
+      # Попробуем изменить элемент - это вызовет ошибку!
+      # my_tuple[2] = 10  # TypeError: 'tuple' object does not support item assignment
+      
+      # Попробуем добавить элемент - тоже ошибка
+      # my_tuple.append(6)  # AttributeError: 'tuple' object has no attribute 'append'
+      
+      <span class="perem">print</span>("Кортежи нельзя изменять после создания")
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Кортежи — неизменяемые последовательности.
+            Любая попытка изменить существующий кортеж (изменить элемент,
+            добавить новый или удалить) вызовет ошибку. Это свойство делает
+            кортежи безопасными для хранения константных данных и позволяет
+            использовать их в качестве ключей словаря.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Исходный кортеж: (1, 2, 3, 4, 5)</span>
+              <span class="output">Кортежи нельзя изменять после создания</span>
+                    </code></pre>
+          </div>
+
+          <p>Срезы кортежей</p>
+          <p>
+            Как и со списками, с кортежами можно работать с помощью срезов,
+            которые возвращают новый кортеж.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">numbers</span> = (10, 20, 30, 40, 50, 60, 70)
+      <span class="perem">print</span>("Весь кортеж:", numbers)
+      <span class="perem">print</span>("Элементы с 1 по 4 (не включая 4):", numbers[1:4])
+      <span class="perem">print</span>("Каждый второй элемент:", numbers[::2])
+      <span class="perem">print</span>("Кортеж в обратном порядке:", numbers[::-1])
+      <span class="perem">print</span>("Первые 3 элемента:", numbers[:3])
+      <span class="perem">print</span>("Последние 3 элемента:", numbers[-3:])
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Срезы кортежей работают так же, как и срезы
+            списков. Они создают новый кортеж, содержащий указанные элементы.
+            Синтаксис: [начало:конец:шаг]. Начало включается, конец — не
+            включается. Отрицательные индексы работают как обычно. Шаг может
+            быть отрицательным для обращения порядка.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Весь кортеж: (10, 20, 30, 40, 50, 60, 70)</span>
+              <span class="output">Элементы с 1 по 4 (не включая 4): (20, 30, 40)</span>
+              <span class="output">Каждый второй элемент: (10, 30, 50, 70)</span>
+              <span class="output">Кортеж в обратном порядке: (70, 60, 50, 40, 30, 20, 10)</span>
+              <span class="output">Первые 3 элемента: (10, 20, 30)</span>
+              <span class="output">Последние 3 элемента: (50, 60, 70)</span>
+                    </code></pre>
+          </div>
+
+          <p>Объединение и повторение кортежей</p>
+          <p>
+            Кортежи можно объединять с помощью оператора + и повторять с помощью
+            *.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">tuple1</span> = (1, 2, 3)
+      <span class="perem">tuple2</span> = (4, 5, 6)
+      
+      <span class="perem">combined</span> = tuple1 + tuple2
+      <span class="perem">repeated</span> = tuple1 * 3
+      
+      <span class="perem">print</span>("Объединение:", combined)
+      <span class="perem">print</span>("Повторение:", repeated)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Оператор + создаёт новый кортеж, объединяя
+            элементы двух кортежей. Оператор * повторяет кортеж указанное
+            количество раз. Обратите внимание: исходные кортежи не изменяются, а
+            создаются новые. Это соответствует принципу неизменяемости кортежей.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Объединение: (1, 2, 3, 4, 5, 6)</span>
+              <span class="output">Повторение: (1, 2, 3, 1, 2, 3, 1, 2, 3)</span>
+                    </code></pre>
+          </div>
+
+          <p>Методы кортежей (count и index)</p>
+          <p>
+            У кортежей есть два основных метода: count() — подсчитывает
+            количество вхождений элемента, и index() — находит индекс первого
+            вхождения элемента.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">numbers</span> = (1, 2, 3, 1, 4, 1, 5, 1)
+      
+      <span class="perem">count_ones</span> = numbers.count(1)
+      <span class="perem">first_index</span> = numbers.index(3)
+      <span class="perem">first_index_one</span> = numbers.index(1)
+      
+      <span class="perem">print</span>("Количество единиц:", count_ones)
+      <span class="perem">print</span>("Индекс числа 3:", first_index)
+      <span class="perem">print</span>("Индекс первой единицы:", first_index_one)
+      
+      # Поиск с указанием диапазона
+      <span class="perem">index_in_range</span> = numbers.index(1, 2, 6)  # Ищем 1 с индекса 2 до 6
+      <span class="perem">print</span>("Индекс единицы в диапазоне [2:6]:", index_in_range)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> count() возвращает количество раз, которое
+            элемент встречается в кортеже. index() возвращает индекс первого
+            вхождения элемента. Можно указать начальный и конечный индексы для
+            поиска в диапазоне. Если элемент не найден, index() вызовет ошибку
+            ValueError.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Количество единиц: 4</span>
+              <span class="output">Индекс числа 3: 2</span>
+              <span class="output">Индекс первой единицы: 0</span>
+              <span class="output">Индекс единицы в диапазоне [2:6]: 3</span>
+                    </code></pre>
+          </div>
+
+          <p>Длина кортежа и проверка наличия элемента</p>
+          <p>
+            Функция len() возвращает длину кортежа, оператор in проверяет
+            наличие элемента.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">colors</span> = ("красный", "зеленый", "синий", "желтый")
+      
+      <span class="perem">print</span>("Длина кортежа:", len(colors))
+      <span class="perem">print</span>("Есть ли 'зеленый'?", "зеленый" in colors)
+      <span class="perem">print</span>("Есть ли 'фиолетовый'?", "фиолетовый" in colors)
+      <span class="perem">print</span>("Нет ли 'черного'?", "черный" not in colors)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> len() возвращает количество элементов в
+            кортеже. Оператор in проверяет, содержится ли элемент в кортеже, и
+            возвращает True или False. Оператор not in проверяет отсутствие
+            элемента. Эти операции работают очень быстро.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Длина кортежа: 4</span>
+              <span class="output">Есть ли 'зеленый'? True</span>
+              <span class="output">Есть ли 'фиолетовый'? False</span>
+              <span class="output">Нет ли 'черного'? True</span>
+                    </code></pre>
+          </div>
+
+          <p>Распаковка кортежей (tuple unpacking)</p>
+          <p>
+            Распаковка — это присвоение элементов кортежа отдельным переменным.
+            Это очень удобная возможность Python.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">point</span> = (10, 20)
+      <span class="perem">x</span>, <span class="perem">y</span> = point
+      <span class="perem">print</span>(f"x = {x}, y = {y}")
+      
+      <span class="perem">person</span> = ("Иван", 25, "Москва")
+      <span class="perem">name</span>, <span class="perem">age</span>, <span class="perem">city</span> = person
+      <span class="perem">print</span>(f"Имя: {name}, Возраст: {age}, Город: {city}")
+      
+      # Распаковка с использованием * для сбора остатка
+      <span class="perem">numbers</span> = (1, 2, 3, 4, 5)
+      <span class="perem">first</span>, <span class="perem">*rest</span> = numbers
+      <span class="perem">print</span>(f"Первый: {first}, Остальные: {rest}")
+      
+      <span class="perem">*beginning</span>, <span class="perem">last</span> = numbers
+      <span class="perem">print</span>(f"Начало: {beginning}, Последний: {last}")
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Распаковка позволяет присвоить элементы
+            кортежа переменным в одной строке. Количество переменных должно
+            совпадать с количеством элементов (если не используется *).
+            Звёздочка * собирает оставшиеся элементы в список. Это удобно, когда
+            нужно получить только некоторые элементы кортежа.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">x = 10, y = 20</span>
+              <span class="output">Имя: Иван, Возраст: 25, Город: Москва</span>
+              <span class="output">Первый: 1, Остальные: [2, 3, 4, 5]</span>
+              <span class="output">Начало: [1, 2, 3, 4], Последний: 5</span>
+                    </code></pre>
+          </div>
+
+          <p>Вложенные кортежи</p>
+          <p>
+            Кортежи могут содержать другие кортежи, создавая иерархические
+            структуры данных.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">matrix</span> = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+      
+      <span class="perem">print</span>("Вся матрица:", matrix)
+      <span class="perem">print</span>("Вторая строка:", matrix[1])
+      <span class="perem">print</span>("Элемент во 2-й строке, 3-м столбце:", matrix[1][2])
+      
+      # Перебор вложенного кортежа
+      <span class="perem">for</span> row <span class="perem">in</span> matrix:
+          <span class="perem">for</span> element <span class="perem">in</span> row:
+              <span class="perem">print</span>(element, end=" ")
+          <span class="perem">print</span>()
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Вложенные кортежи позволяют создавать
+            многомерные структуры. Доступ к элементам осуществляется
+            последовательным указанием индексов: matrix[1][2] — сначала получаем
+            вторую строку (индекс 1), затем третий элемент в этой строке (индекс
+            2). Вложенные кортежи полностью сохраняют свойство неизменяемости.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Вся матрица: ((1, 2, 3), (4, 5, 6), (7, 8, 9))</span>
+              <span class="output">Вторая строка: (4, 5, 6)</span>
+              <span class="output">Элемент во 2-й строке, 3-м столбце: 6</span>
+              <span class="output">1 2 3</span>
+              <span class="output">4 5 6</span>
+              <span class="output">7 8 9</span>
+                    </code></pre>
+          </div>
+
+          <p>Преобразование между списками и кортежами</p>
+          <p>
+            Можно легко преобразовывать списки в кортежи и наоборот с помощью
+            функций tuple() и list().
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">my_list</span> = [1, 2, 3, 4, 5]
+      <span class="perem">my_tuple</span> = tuple(my_list)
+      <span class="perem">print</span>("Список:", my_list)
+      <span class="perem">print</span>("Кортеж из списка:", my_tuple)
+      
+      <span class="perem">another_tuple</span> = (10, 20, 30, 40)
+      <span class="perem">another_list</span> = list(another_tuple)
+      <span class="perem">print</span>("Кортеж:", another_tuple)
+      <span class="perem">print</span>("Список из кортежа:", another_list)
+      
+      # Можно изменять список, полученный из кортежа
+      <span class="perem">another_list</span>.append(50)
+      <span class="perem">print</span>("Изменённый список:", another_list)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> tuple() создаёт новый кортеж из любой
+            итерируемой последовательности (списка, строки, множества). list()
+            создаёт новый список из кортежа. Это удобно, когда нужно временно
+            изменить данные: преобразовать кортеж в список, изменить, а затем
+            преобразовать обратно в кортеж.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Список: [1, 2, 3, 4, 5]</span>
+              <span class="output">Кортеж из списка: (1, 2, 3, 4, 5)</span>
+              <span class="output">Кортеж: (10, 20, 30, 40)</span>
+              <span class="output">Список из кортежа: [10, 20, 30, 40]</span>
+              <span class="output">Изменённый список: [10, 20, 30, 40, 50]</span>
+                    </code></pre>
+          </div>
+
+          <p>Кортежи как ключи словаря</p>
+          <p>
+            Благодаря неизменяемости, кортежи могут использоваться в качестве
+            ключей словаря (в отличие от списков).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Программный код:</p><code>
+      # Словарь с кортежами в качестве ключей
+      <span class="perem">coordinates</span> = {
+          (0, 0): "Начало координат",
+          (1, 0): "Точка на оси X",
+          (0, 1): "Точка на оси Y",
+          (1, 1): "Единичный квадрат"
+      }
+      
+      <span class="perem">print</span>(coordinates[(0, 0)])
+      <span class="perem">print</span>(coordinates[(1, 1)])
+      
+      # Проверка наличия ключа-кортежа
+      <span class="perem">if</span> (2, 3) <span class="perem">in</span> coordinates:
+          <span class="perem">print</span>("Есть точка (2, 3)")
+      <span class="perem">else</span>:
+          <span class="perem">print</span>("Точки (2, 3) нет в словаре")
+      
+      # Список НЕ может быть ключом словаря
+      # bad_dict = {[1, 2]: "список"}  # TypeError: unhashable type: 'list'
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Кортежи являются хэшируемыми (hashable),
+            потому что они неизменяемы. Это позволяет использовать их в качестве
+            ключей словаря. Списки изменяемы, поэтому они не могут быть ключами.
+            Это одно из главных преимуществ кортежей перед списками.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block2"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Начало координат</span>
+              <span class="output">Единичный квадрат</span>
+              <span class="output">Точки (2, 3) нет в словаре</span>
+                    </code></pre>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

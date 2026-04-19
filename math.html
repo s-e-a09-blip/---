@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Математика</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <div class="b2">
+      <h1>Математика</h1>
+      <p class="text-style">Рассмотрим одну из основных функций</p>
+    </div>
+    <main class="main-topic">
+      <h1 class="topic-title">Арифметика</h1>
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Знаете, что меня всегда цепляло в программировании? Как всякие
+              школьные задачки по математике — сложение, вычитание становятся
+              основой для чего-то реально крутого, вроде игр или приложений. Без
+              этого фундамента ни одну нормальную программу не замутишь.
+            </p>
+            <p>
+              Представьте, что вы пишете код для калькулятора зарплаты, или для
+              интернет-магазина, чтобы скидки считать, или для игры, где нужно
+              начислять очки. Без арифметики никуда!Те, кто влёт разобрался с
+              операторами, потом гораздо быстрее втыкают в сложные темы.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="subsection">
+        <h2 class="subtitle">Что такое арифметические операторы в Python?</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Арифметические операторы — это как кнопки: плюс, минус, умножить,
+              поделить. Только в Python есть ещё пара-тройка прикольных
+              "кнопок", которые делают вычисления мощнее.
+            </p>
+            <p>
+              Арифметические операторы в Python это значки, которые отвечают за
+              математические действия с числами. Они работают с целыми числами
+              (int), дробными (float).
+            </p>
+            <p>
+              Важно понимать: Python не просто выполняет вычисления, он делает
+              это умно. Например, если вы складываете целое число с числом с
+              плавающей точкой, результат автоматически становится float
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="subsection">
+        <h2 class="subtitle">
+          Основные типы арифметических операторов в Python
+        </h2>
+        <div class="b2">
+          <h1>Сложение (+)</h1>
+          <p class="text-style">
+            Самый простой и понятный оператор, но даже тут есть нюансы:
+          </p>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор сложения предназначен для суммирования двух операндов в
+              программе. Операндами могут быть переменные и объекты разных
+              типов; кроме того, в некоторых случаях возможно суммирование
+              данных двух отличающихся типов. Интерпретатор Python достаточно
+              разумен, чтобы выполнить необходимое преобразование типа и
+              предоставить результат программисту. Оператор сложения
+              обозначается символом +.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 10 <br>
+              <span class="perem">y</span>= 3 <br> 
+              <span class="perem">result</span> = x <span class="th">+</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">13</span> <br> 
+              <span class="output">"Сложение чисел"</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор суммирует
+              значения двух переменных и сохраняет результат в переменной result
+            </p>
+            <p></p>
+            <h2>Сложение строк</h2>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = "Иван" <br>
+              <span class="perem">y</span>= "Петров" <br> 
+              <span class="perem">result</span> = x <span class="th">+</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">Иван Петров</span> <br> 
+              <span class="output">"Сложение строк"</span>
+            </code></pre>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Вычитание (-)</h1>
+          <p class="text-style">Также один из простых операторов.</p>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор вычитания вычитает одно значение из другого. Операндами
+              могут быть переменные и объекты разных типов; кроме того, в
+              некоторых случаях возможно вычитание данных двух отличающихся
+              типов. Оператор вычитания обозначается символом -.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 54 <br>
+              <span class="perem">y</span>= 34 <br> 
+              <span class="perem">result</span> = x <span class="th">-</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">20</span> <br> 
+              <span class="output">"Вычитание чисел"</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              разность двух операндов и сохраняет ее в переменной result.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Умножение (*)</h1>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор умножения вычисляет произведение двух значений в
+              программе. Операндами могут быть переменные и объекты разных
+              типов; кроме того, в некоторых случаях возможно умножение данных
+              двух отличающихся типов. Операция умножения обозначается символом
+              *
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 5 <br>
+              <span class="perem">y</span>= 3 <br> 
+              <span class="perem">result</span> = x <span class="th">*</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">15</span> <br> 
+              <span class="output">"Умножение чисел"</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              произведение двух операндов и сохраняет его в переменной result.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Возведение в степень (**)</h1>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор умножения вычисляет произведение двух значений в
+              программе. Операндами могут быть переменные и объекты разных
+              типов; кроме того, в некоторых случаях возможно умножение данных
+              двух отличающихся типов. Операция умножения обозначается символом
+              *
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="keyword">print</span>(2 ** 3) <br>
+              <span class="keyword">print</span>(2 ** -3)<br> 
+              <span class="keyword">print</span>(2.5 ** 2)<br> 
+              
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">8</span> <br> 
+              <span class="output">0.125</span> <br>
+              <span class="output">6.25</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              произведение двух операндов и сохраняет его в переменной result.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Деление (/)</h1>
+          <p class="text-style">В ней есть небольшие трудности.</p>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор деления вычисляет частное двух операндов. Операндами
+              могут быть целые числа и числа с плавающей точкой, а оператор
+              деления обозначается символом /.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 6 <br>
+              <span class="perem">y</span>= 3 <br> 
+              <span class="perem">result</span> = x <span class="th">/</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">2.0</span> <br> 
+              <span class="output">"Деление чисел"</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              частное двух операндов и сохраняет его в переменной result.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Остаток от деление (%)</h1>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Данный оператор определяет остаток от целочисленного деления.
+              Вычисление остатка часто применяется в программной логике и
+              осуществляется с помощью символа %.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 7 <br>
+              <span class="perem">y</span>= 3 <br> 
+              <span class="perem">result</span> = x <span class="th">%</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">1</span> <br> 
+              <span class="output">"Остаток"</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              остаток от целочисленного деления двух операндов и сохраняет его в
+              переменной result.
+            </p>
+            <h2>НО:</h2>
+            <p>
+              Если нужно найти остаток от деления отрицательно числа,сначала
+              нужно возвести его в квадрат командой abs:
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+                <span class="perem">x</span> = -10 <br>
+                <span class="perem">y</span> = 3 <br> 
+                <span class="perem">result</span> = abs(x) <span class="th">%</span> y <br>
+                <span class="keyword">print</span>(result)
+              </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+                <span class="output">1</span> <br> 
+                <span class="output">"Остаток"</span>
+              </code></pre>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Целочисленное деление (//)</h1>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Целочисленное деление — альтернативный арифметический оператор,
+              который часто используется разработчиками, если для них не важна
+              точность результата. Обычно этот оператор выводит целочисленное
+              значение, ближайшее к частному, получаемому в результате деления.
+              Оператор целочисленного деления обозначается символами //.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 12 <br>
+              <span class="perem">y</span>= 5 <br> 
+              <span class="perem">result</span> = x <span class="th">//</span> y <br>
+              <span class="keyword">print</span>(result)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">2</span> <br> 
+              <span class="output">"Целая часть"</span>
+            </code></pre>
+            </div>
+            <p>
+              В действительности результат деления в этой программе равен 2,4,
+              но, так как мы используем оператор целочисленного деления,
+              программа в качестве результата возвращает ближайшее целое число.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="subsection">
+        <div class="b2">
+          <h1>Практика</h1>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              На этом наш разбор базовых математических действий подошел к
+              концу. Чтобы проверить свои знания пройдите тест ниже или
+              прорешайте задания.Желаем удачи
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Чему равно выражение 2**3+10//3?",
+          options: ["9", "10", "11"],
+          answer: 2,
+        },
+        {
+          q: "Что выведет этот код: print(15%4)?",
+          options: ["3", "4", "3.75"],
+          answer: 0,
+        },
+        {
+          q: "Каков результат выполнения int(3.9)",
+          options: ["3.0", "4", "3"],
+          answer: 2,
+        },
+        {
+          q: "Что выведет программа: print(7==5+2)?",
+          options: ["True", "False", "7"],
+          answer: 0,
+        },
+        {
+          q: "Что выведет этот код: print(round(2.5))?",
+          options: ["2", "3", "2.0"],
+          answer: 0,
+        },
+        {
+          q: "Какой результат у выражения not(5>3 and 2<4)?",
+          options: ["True", "False", "Error"],
+          answer: 1,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+        <p>${idx + 1}. ${item.q}</p>
+        ${item.options
+          .map(
+            (opt, i) => `
+            <label>
+                <input type='radio' name='q${idx}' value='${i}'> ${opt}
+            </label><br>`
+          )
+          .join("")}
+        `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("Математические операции", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

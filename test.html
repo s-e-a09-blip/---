@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="title-test">Контрольный тест по Python</h1>
+    
+      <form id="quizForm">
+        <div class="question">
+          <h3>1. Какой символ используется для присваивания значения переменной?</h3>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a" /> =</label>
+            <label><input type="radio" name="q1" value="b" /> ==</label>
+            <label><input type="radio" name="q1" value="c" /> :=</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>2. Какое из этих имен переменных НЕ корректно в Python?</h3>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a" /> my_var</label>
+            <label><input type="radio" name="q2" value="b" /> _var1</label>
+            <label><input type="radio" name="q2" value="c" /> 1var</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>3. Какой тип данных будет у переменной x = "123"?</h3>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a" /> int</label>
+            <label><input type="radio" name="q3" value="b" /> float</label>
+            <label><input type="radio" name="q3" value="c" /> str</label>
+          </div>
+        </div>
+        
+        <!-- ВВОД И ВЫВОД ДАННЫХ -->
+        <div class="question">
+          <h3>4. Что выведет print(2 + "2")?</h3>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a" /> 4</label>
+            <label><input type="radio" name="q4" value="b" /> 22</label>
+            <label><input type="radio" name="q4" value="c" /> Ошибку типа</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>5. Как вывести текст без перехода на новую строку?</h3>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a" /> print(text, end="")</label>
+            <label><input type="radio" name="q5" value="b" /> print(text, newline=False)</label>
+            <label><input type="radio" name="q5" value="c" /> print.no_newline(text)</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>6. Как прочитать вещественное число с клавиатуры?</h3>
+          <div class="options">
+            <label><input type="radio" name="q6" value="a" /> input()</label>
+            <label><input type="radio" name="q6" value="b" /> float(input())</label>
+            <label><input type="radio" name="q6" value="c" /> read_float()</label>
+          </div>
+        </div>
+        
+        <!-- МАТЕМАТИЧЕСКИЕ ДЕЙСТВИЯ -->
+        <div class="question">
+          <h3>7. Чему равно 10 // 3?</h3>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a" /> 3.333</label>
+            <label><input type="radio" name="q7" value="b" /> 3</label>
+            <label><input type="radio" name="q7" value="c" /> 1</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>8. Чему равно 10 % 3?</h3>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a" /> 3</label>
+            <label><input type="radio" name="q8" value="b" /> 1</label>
+            <label><input type="radio" name="q8" value="c" /> 0</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>9. Как возвести число 2 в степень 5?</h3>
+          <div class="options">
+            <label><input type="radio" name="q9" value="a" /> 2 * 5</label>
+            <label><input type="radio" name="q9" value="b" /> 2 ^ 5</label>
+            <label><input type="radio" name="q9" value="c" /> 2 ** 5</label>
+          </div>
+        </div>
+        
+        <!-- УСЛОВНЫЕ ОПЕРАТОРЫ -->
+        <div class="question">
+          <h3>10. Что проверяет условие if not x?</h3>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a" /> Что x больше 0</label>
+            <label><input type="radio" name="q10" value="b" /> Что x равно None</label>
+            <label><input type="radio" name="q10" value="c" /> Что x ложно</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>11. Как проверить, что переменная a равна 5 ИЛИ b равна 10?</h3>
+          <div class="options">
+            <label><input type="radio" name="q11" value="a" /> if a == 5 and b == 10:</label>
+            <label><input type="radio" name="q11" value="b" /> if a == 5 || b == 10:</label>
+            <label><input type="radio" name="q11" value="c" /> if a == 5 or b == 10:</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>12. Когда выполняется блок else в конструкции if-elif-else?</h3>
+          <div class="options">
+            <label><input type="radio" name="q12" value="a" /> Всегда</label>
+            <label><input type="radio" name="q12" value="b" /> Если все условия if и elif ложны</label>
+            <label><input type="radio" name="q12" value="c" /> Если условие if ложно</label>
+          </div>
+        </div>
+        
+        <!-- ЦИКЛЫ -->
+        <div class="question">
+          <h3>13. Сколько раз выполнится цикл for i in range(3):?</h3>
+          <div class="options">
+            <label><input type="radio" name="q13" value="a" /> 1</label>
+            <label><input type="radio" name="q13" value="b" /> 2</label>
+            <label><input type="radio" name="q13" value="c" /> 3</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>14. Какой цикл выполняется, пока условие истинно?</h3>
+          <div class="options">
+            <label><input type="radio" name="q14" value="a" /> for</label>
+            <label><input type="radio" name="q14" value="b" /> while</label>
+            <label><input type="radio" name="q14" value="c" /> foreach</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>15. Как пропустить текущую итерацию цикла и перейти к следующей?</h3>
+          <div class="options">
+            <label><input type="radio" name="q15" value="a" /> break</label>
+            <label><input type="radio" name="q15" value="b" /> pass</label>
+            <label><input type="radio" name="q15" value="c" /> continue</label>
+          </div>
+        </div>
+        
+        <!-- СПИСКИ -->
+        <div class="question">
+          <h3>16. Как создать пустой список?</h3>
+          <div class="options">
+            <label><input type="radio" name="q16" value="a" /> {}</label>
+            <label><input type="radio" name="q16" value="b" /> []</label>
+            <label><input type="radio" name="q16" value="c" /> ()</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>17. Как получить последний элемент списка my_list?</h3>
+          <div class="options">
+            <label><input type="radio" name="q17" value="a" /> my_list[0]</label>
+            <label><input type="radio" name="q17" value="b" /> my_list[-1]</label>
+            <label><input type="radio" name="q17" value="c" /> my_list.last()</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>18. Как удалить элемент с индексом 2 из списка?</h3>
+          <div class="options">
+            <label><input type="radio" name="q18" value="a" /> my_list.remove(2)</label>
+            <label><input type="radio" name="q18" value="b" /> del my_list[2]</label>
+            <label><input type="radio" name="q18" value="c" /> my_list.pop()</label>
+          </div>
+        </div>
+        
+        <!-- СТРОКИ -->
+        <div class="question">
+          <h3>19. Как получить длину строки s?</h3>
+          <div class="options">
+            <label><input type="radio" name="q19" value="a" /> s.size()</label>
+            <label><input type="radio" name="q19" value="b" /> len(s)</label>
+            <label><input type="radio" name="q19" value="c" /> s.length()</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>20. Как преобразовать строку в верхний регистр?</h3>
+          <div class="options">
+            <label><input type="radio" name="q20" value="a" /> s.upper()</label>
+            <label><input type="radio" name="q20" value="b" /> s.to_upper()</label>
+            <label><input type="radio" name="q20" value="c" /> upper(s)</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>21. Как проверить, начинается ли строка с "Hello"?</h3>
+          <div class="options">
+            <label><input type="radio" name="q21" value="a" /> s.find("Hello") == 0</label>
+            <label><input type="radio" name="q21" value="b" /> s.startswith("Hello")</label>
+            <label><input type="radio" name="q21" value="c" /> Все варианты верны</label>
+          </div>
+        </div>
+        
+        <!-- КОРТЕЖИ -->
+        <div class="question">
+          <h3>22. Как создать кортеж с одним элементом (5)?</h3>
+          <div class="options">
+            <label><input type="radio" name="q22" value="a" /> (5)</label>
+            <label><input type="radio" name="q22" value="b" /> [5]</label>
+            <label><input type="radio" name="q22" value="c" /> (5,)</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>23. Можно ли изменить элемент кортежа после создания?</h3>
+          <div class="options">
+            <label><input type="radio" name="q23" value="a" /> Да</label>
+            <label><input type="radio" name="q23" value="b" /> Нет</label>
+            <label><input type="radio" name="q23" value="c" /> Только с помощью специальных методов</label>
+          </div>
+        </div>
+        
+        <!-- ФУНКЦИИ -->
+        <!-- <div class="question">
+          <h3>24. Как объявить функцию без параметров?</h3>
+          <div class="options">
+            <label><input type="radio" name="q24" value="a" /> def func</label>
+            <label><input type="radio" name="q24" value="b" /> def func()</label>
+            <label><input type="radio" name="q24" value="c" /> function func():</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>25. Что возвращает функция без оператора return?</h3>
+          <div class="options">
+            <label><input type="radio" name="q25" value="a" /> 0</label>
+            <label><input type="radio" name="q25" value="b" /> None</label>
+            <label><input type="radio" name="q25" value="c" /> Ошибку</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>26. Какой параметр функции является необязательным?</h3>
+          <div class="options">
+            <label><input type="radio" name="q26" value="a" /> Параметр по умолчанию</label>
+            <label><input type="radio" name="q26" value="b" /> Позиционный параметр</label>
+            <label><input type="radio" name="q26" value="c" /> Именованный параметр</label>
+          </div>
+        </div> -->
+        
+        <!-- СЛОВАРИ -->
+        <div class="question">
+          <h3>24. Как создать пустой словарь?</h3>
+          <div class="options">
+            <label><input type="radio" name="q27" value="a" /> []</label>
+            <label><input type="radio" name="q27" value="b" /> {}</label>
+            <label><input type="radio" name="q27" value="c" /> ()</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>25. Как получить все ключи словаря d?</h3>
+          <div class="options">
+            <label><input type="radio" name="q28" value="a" /> d.keys()</label>
+            <label><input type="radio" name="q28" value="b" /> d.values()</label>
+            <label><input type="radio" name="q28" value="c" /> d.items()</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>26. Что вернет d.get("key", "default") если ключа "key" нет?</h3>
+          <div class="options">
+            <label><input type="radio" name="q29" value="a" /> Ошибку KeyError</label>
+            <label><input type="radio" name="q29" value="b" /> None</label>
+            <label><input type="radio" name="q29" value="c" /> "default"</label>
+          </div>
+        </div>
+        
+        <!-- МНОЖЕСТВА -->
+        <div class="question">
+          <h3>27. Как добавить элемент в множество s?</h3>
+          <div class="options">
+            <label><input type="radio" name="q30" value="a" /> s.append(x)</label>
+            <label><input type="radio" name="q30" value="b" /> s.add(x)</label>
+            <label><input type="radio" name="q30" value="c" /> s.insert(x)</label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <h3>28. Какой оператор удаляет повторяющиеся элементы из списка?</h3>
+          <div class="options">
+            <label><input type="radio" name="q31" value="a" /> list(set(my_list))</label>
+            <label><input type="radio" name="q31" value="b" /> my_list.unique()</label>
+            <label><input type="radio" name="q31" value="c" /> unique(my_list)</label>
+          </div>
+        </div>
+        
+
+    
+        <button type="button" onclick="checkAnswers()" class="finish-button">
+          Проверить ответы
+        </button>
+      </form>
+      <div id="result"></div>
+    </main>
+    
+    <script>
+      function checkAnswers() {
+        const correct = {
+          q1: "a",
+          q2: "c",
+          q3: "c",
+          q4: "c",
+          q5: "a",
+          q6: "b",
+          q7: "b",
+          q8: "b",
+          q9: "c",
+          q10: "c",
+          q11: "c",
+          q12: "b",
+          q13: "c",
+          q14: "b",
+          q15: "c",
+          q16: "b",
+          q17: "b",
+          q18: "b",
+          q19: "b",
+          q20: "a",
+          q21: "c",
+          q22: "c",
+          q23: "b",
+
+          q24: "b",
+          q25: "a",
+          q26: "c",
+
+          q27: "b",
+          q28: "a",
+
+
+        };
+        let score = 0;
+        let total = Object.keys(correct).length;
+    
+        for (let key in correct) {
+          const answer = document.querySelector(
+            `input[name="${key}"]:checked`
+          );
+          if (answer && answer.value == correct[key]) { 
+            score++;
+          }
+        }
+        document.getElementById(
+          "result"
+        ).innerText = `Вы набрали ${score} из ${total} правильных ответов.`;
+      }
+    </script>
+  </body>
+</html>

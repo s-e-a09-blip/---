@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Операторы</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <div class="b2">
+      <h1>Операторы</h1>
+      <p class="text-style">Рассмотрим ещё одну из основных функций</p>
+    </div>
+    <main class="main-topic">
+      <h1 class="topic-title">Зачем это надо</h1>
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Любое мобильное или веб-приложение должно гибко реагировать на
+              действия пользователя. Пользователи постоянно принимают решения:
+              нажимают кнопки, выбирают настройки, вводят данные. Задача
+              программы — отвечать на эти действия, динамически подстраивая
+              интерфейс и свою логику под выбор человека. Этот принцип делает
+              приложение «умным» и интуитивно понятным.
+            </p>
+            <p>
+              Основу для такого динамического поведения в программировании
+              закладывают условные конструкции и циклы.Эти структуры не только
+              делают программу адаптивной, но и помогают оптимизировать её
+              работу, делая код эффективнее. Для Python-разработчика уверенное
+              владение условиями и циклами — это обязательный базовый навык. Они
+              являются фундаментом для изучения более сложных тем, таких как
+              функции, модули и объектно-ориентированное программирование.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="subsection">
+        <h2 class="subtitle">Что такое арифметические операторы в Python?</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Чтобы использовать условия и циклы на практике, необходимо
+              понимать операторы сравнения.
+            </p>
+            <p>
+              Как следует из названия, эти операторы сравнивают два значения
+              (операнда) и возвращают результат в виде логического значения —
+              True (Истина) или False (Ложь). Именно этот результат (True или
+              False) определяет, выполнится ли блок кода в условии или сколько
+              раз отработает цикл.
+            </p>
+            <p>
+              Уверенное владение условиями, циклами и операторами сравнения —
+              обязательный базовый навык для Python-разработчика. Этот фундамент
+              критически важен для перехода к более сложным темам, таким как
+              функции, модули и объектно-ориентированное программирование.
+            </p>
+          </div>
+        </section>
+      </article>
+      <article class="subsection">
+        <h2 class="subtitle">
+          Основные типы арифметических операторов в Python
+        </h2>
+        <div class="b2">
+          <h1>Знаки меньше и больше (< >)</h1>
+          <p class="text-style">
+            Самый простой и понятный оператор, но даже тут есть нюансы:
+          </p>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор «меньше» проверяет, меньше ли значение левого операнда,
+              чем значение правого операнда. Если присмотреться к двум
+              приведенным примерам, в первом случае выводится True, потому что
+              64 меньше 83, а во втором примере выводится False — ведь 73 точно
+              не меньше 45. Аналогичным образом оператор «меньше» может
+              использоваться для сравнения чисел с плавающей точкой, строк и
+              многого другого.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 64 < 83 <br>
+              <span class="perem">y</span> = 73 < 45 <br> 
+              <span class="keyword">print</span>(x) <br>
+              <span class="keyword">print</span>(y)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">True</span> <br> 
+              <span class="output">False</span>
+            </code></pre>
+            </div>
+
+            <p></p>
+            <h2>Сравнение строк</h2>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="perem">x</span> = 'Sample' < 'sample' <br>
+              <span class="keyword">print</span>(x)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">True</span> <br> 
+             
+            </code></pre>
+            </div>
+          </div>
+          <p>
+            В этом примере выводится логическое значение True, потому что
+            ASCII-код буквы нижнего регистра обычно больше ASCII-кодов букв
+            верхнего регистра.
+          </p>
+          <p>Все также но наоборот работает оператор ">"</p>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <div class="b2">
+          <h1>Приравнивание (==)</h1>
+          <p class="text-style">Также один из простых операторов.</p>
+        </div>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Оператор «равно» проверяет, равны ли значения двух операндов —
+              левого и правого. Если значения равны, возвращается логическое
+              значение True, а если нет — значение False.
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Программный код:</p><code>
+              <span class="keyword">print</span>(64 == 64)<br>
+              <span class="keyword">print</span>(43 == 42)
+            </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block3"
+              ><p class="code-title">Вывод:</p><code>
+              <span class="output">True</span> <br> 
+              <span class="output">False</span>
+            </code></pre>
+            </div>
+            <p>
+              При выполнении программы в IDE или IDLE интерпретатор вычисляет
+              разность двух операндов и сохраняет ее в переменной
+              result.Оператор «неравно» обозначается так:
+              <span class="keyword1">!=</span>
+            </p>
+            <p>
+              Теперь вы знаете, как работают операторы сравнения, и мы можем
+              перейти к операторам управления, знать которые разработчикам
+              просто необходимо. Программисты используют их даже в относительно
+              простом коде.
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Условные операторы зависят от принятия решений при выполнении
+              конкретных операций. Если условие не выполняется, соответствующий
+              блок условной логики пропускается.
+            </p>
+            <p>
+              Для выбора между двумя блоками в Python существует базовая команда
+              if/else.
+            </p>
+            <p>
+              if условие: <br />
+              <i> <font color="white"> ffffff</font>выполняемая команда</i>
+              <br />
+              else: <br />
+              <i> <font color="white"> ffffff</font>выполняемая команда</i>
+            </p>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+      <span class="keyword"></span>number = 43
+      <span class="keyword">if</span> number % 3 == 0:
+        <span class="keyword">print</span>("This number is divided by 3")
+      <span class="keyword">else:</span>
+        <span class="keyword">print</span>("This number is not divisible by 3")
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+            <span class="output">This number is not divisible by 3</span>
+        </code></pre>
+            </div>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Как работает код</h3>
+            <ul class="section-list">
+              <li>
+                Сначала необходимо определить переменную, которая будет хранить
+                данные, проверяемые условием if/else.
+              </li>
+              <li>
+                Код, который выполняется после команды if (else), должен иметь
+                отступ (четыре знака «пробел»)
+              </li>
+              <li>
+                В более сложных программах используются средства ввода (input)
+                для получения данных непосредственно от пользователя
+              </li>
+              <li>
+                После того как переменная будет сохранена, интерпретатор
+                обрабатывает условие блока if.
+              </li>
+              <li>
+                Интерпретатор Python выполняет операцию вычисления остатка и
+                определяет, кратно ли 3 проверяемое число.
+              </li>
+              <li>
+                Если число кратно 3, выполняется блок, расположенный под
+                ключевым словом if.
+              </li>
+              <li>
+                Так как в данном случае условие ложно, интерпретатор пропускает
+                блок if и выполняет код блока else. В результате выводится то
+                значение, которое вы видите
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>В следующем примере выполняется код блока if.</p>
+
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+      <span class="keyword"></span>number = 48
+      <span class="keyword">if</span> number % 3 == 0:
+        <span class="keyword">print</span>("This number is divided by 3")
+      <span class="keyword">else:</span>
+        <span class="keyword">print</span>("This number is not divisible by 3")
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+            <span class="output">This number is divided by 3</span>
+        </code></pre>
+            </div>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Как работает код</h3>
+            <p>
+              Так как условие истинно, выполняется команда print блока
+              <span class="keyword1">if</span>,а блок else пропускается
+              интерпретатором
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <article class="subsection">
+        <section class="section">
+          <div class="b2">
+            <p>
+              Чтобы сделать серию проверок более эффективной, можно добавить
+              несколько проверок выполнения условий.
+            </p>
+
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Программный код:</p><code>
+    <span class="keyword"></span>number = 45
+    <span class="keyword">if</span> number % 3 == 0:
+      <span class="keyword">print</span>("This number is divided by 3")
+    <span class="keyword">elif</span> number % 4 == 0:
+      <span class="keyword">print</span>("This number is divisible by 4")
+    <span class="keyword">else:</span>
+      <span class="keyword">print</span>("This number is not divisible by 3 and 4")
+          </code></pre>
+            </div>
+            <div class="block-c">
+              <pre
+                class="code-block hei-block2"
+              ><p class="code-title">Вывод:</p><code>
+            <span class="output">This number is divisible by 3</span>
+        </code></pre>
+            </div>
+          </div>
+          <div class="b2">
+            <h3 class="section-subtitle list-subtitle">Как работает код</h3>
+            <p>
+              В этом примере интерпретатор Python должен проверить три условия.
+              Определив, что первое условие истинно, интерпретатор Python
+              выводит его и пропускает два других условия
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Что выведет код: x = 5; if x > 3: print('A') else: print('B')?",
+          options: ["A", "B", "Ошибку", "Ничего"],
+          answer: 0,
+        },
+        {
+          q: "Какой оператор проверяет 'не равно' в Python?",
+          options: ["!=", "<>", "~=", "!="],
+          answer: 3,
+        },
+        {
+          q: "Что выведет код: age = 17; if age >= 18: print('Взрослый') elif age >= 13: print('Подросток') else: print('Ребенок')?",
+          options: ["Взрослый", "Подросток", "Ребенок", "Ошибку"],
+          answer: 1,
+        },
+        {
+          q: "Как проверить, что число x находится в диапазоне от 10 до 20 включительно?",
+          options: [
+            "if 10 <= x <= 20:",
+            "if x in range(10, 20):",
+            "if x >= 10 and x <= 20:",
+            "if 10 <= x <= 20:",
+          ],
+          answer: 3,
+        },
+        {
+          q: "Что выведет код: if True or False: print('Yes') else: print('No')?",
+          options: ["Yes", "No", "Ошибку", "True"],
+          answer: 0,
+        },
+        {
+          q: "Какой оператор используется для множественного ветвления?",
+          options: ["if-else", "if-elif-else", "switch-case", "select-case"],
+          answer: 1,
+        },
+        {
+          q: "Что выведет код: x = 0; if not x: print('True') else: print('False')?",
+          options: ["True", "False", "0", "Ошибку"],
+          answer: 0,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+      <p>${idx + 1}. ${item.q}</p>
+      ${item.options
+        .map(
+          (opt, i) => `
+          <label>
+              <input type='radio' name='q${idx}' value='${i}'> ${opt}
+          </label><br>`
+        )
+        .join("")}
+      `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("Условные операторы", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

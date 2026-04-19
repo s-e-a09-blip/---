@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images\pythonicon.jpg" />
+    <title>Множества в Python</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="stile-header">
+      <div class="container">
+        <h1>Python учебник</h1>
+        <nav class="nav2">
+          <a href="index.html">Главная</a>
+          <a href="progress.html">Прогресс</a>
+          <a href="test.html">Контрольный тест</a>
+        </nav>
+      </div>
+    </header>
+    <div class="b2">
+      <h1>Множества</h1>
+    </div>
+    <main class="main-topic">
+      <article class="subsection">
+        <h2 class="subtitle">Что такое множество в Python?</h2>
+        <section class="section">
+          <div class="b2">
+            <p>
+              Множества (тип set) — это неупорядоченные коллекции уникальных
+              элементов. Они хранят только неповторяющиеся значения и не
+              поддерживают индексацию. Множества нужны для операций над
+              множествами: объединение, пересечение, разность, а также для
+              быстрой проверки наличия элемента и удаления дубликатов.
+            </p>
+          </div>
+        </section>
+        <div class="b2">
+          <h1>Основные операции с множествами:</h1>
+          <p>
+            Теперь, когда мы знаем, что такое множества, давайте научимся с ними
+            работать. Python предлагает множество удобных операций для
+            манипуляции множествами.
+          </p>
+
+          <p>Создание множества</p>
+          <p>
+            Множества создаются с помощью фигурных скобок {} или функции set().
+            Обратите внимание, что дубликаты автоматически удаляются.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">fruits</span> = {"яблоко", "банан", "апельсин"}
+      <span class="perem">numbers</span> = set([1, 2, 3, 3, 4, 4, 5])  # Из списка с дубликатами
+      <span class="perem">print</span>(fruits)
+      <span class="perem">print</span>(numbers)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Первое множество создаётся напрямую с помощью
+            фигурных скобок. Второе — из списка, который содержит повторяющиеся
+            элементы 3 и 4. Функция set() автоматически удаляет дубликаты,
+            оставляя только уникальные значения. Множества выводятся в
+            произвольном порядке, так как они неупорядочены.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">{'банан', 'яблоко', 'апельсин'}</span>
+              <span class="output">{1, 2, 3, 4, 5}</span>
+                    </code></pre>
+          </div>
+
+          <p>Добавление элементов (add и update)</p>
+          <p>
+            Метод add() добавляет один элемент, а update() добавляет несколько
+            элементов из другой коллекции (списка, кортежа или другого
+            множества).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">colors</span> = {"красный", "синий"}
+      <span class="perem">colors</span>.add("зеленый")              # Добавляем один элемент
+      <span class="perem">colors</span>.update(["желтый", "фиолетовый"])  # Добавляем несколько элементов
+      <span class="perem">print</span>(colors)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Сначала метод add() добавляет в множество
+            цвет "зеленый". Затем метод update() принимает список с двумя
+            цветами и добавляет их оба. Если бы мы попытались добавить уже
+            существующий элемент, он бы просто проигнорировался, так как
+            множество хранит только уникальные значения.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">{'желтый', 'синий', 'зеленый', 'фиолетовый', 'красный'}</span>
+                    </code></pre>
+          </div>
+
+          <p>Удаление элементов (remove, discard и pop)</p>
+          <p>
+            remove() удаляет элемент (если его нет — вызовет ошибку KeyError),
+            discard() удаляет элемент (если его нет — ничего не делает), pop()
+            удаляет и возвращает произвольный элемент (так как множество
+            неупорядочено).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">animals</span> = {"кот", "собака", "птица", "рыба"}
+      <span class="perem">animals</span>.remove("птица")           # Удаляем "птица" - существует
+      <span class="perem">animals</span>.discard("змея")          # Пытаемся удалить "змея" - её нет, но ошибки не будет
+      <span class="perem">random_item</span> = animals.pop()      # Удаляем случайный элемент
+      <span class="perem">print</span>(animals)
+      <span class="perem">print</span>("Удаленный элемент:", random_item)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> remove() удаляет указанный элемент, но если
+            его нет — программа завершится с ошибкой. discard() безопаснее — он
+            просто ничего не сделает, если элемента нет. pop() полезен, когда
+            нужно получить и удалить любой элемент множества, но помните: вы не
+            можете контролировать, какой именно элемент будет удалён.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">{'собака', 'рыба'}</span>
+              <span class="output">Удаленный элемент: кот</span>
+                    </code></pre>
+          </div>
+
+          <p>Объединение множеств (union или |)</p>
+          <p>
+            Объединение возвращает новое множество, содержащее все элементы из
+            обоих исходных множеств. Дубликаты автоматически удаляются.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">set1</span> = {1, 2, 3}
+      <span class="perem">set2</span> = {3, 4, 5}
+      <span class="perem">result</span> = set1.union(set2)      # Метод union
+      <span class="perem">result2</span> = set1 | set2         # Оператор | (более краткая запись)
+      <span class="perem">print</span>("Метод union:", result)
+      <span class="perem">print</span>("Оператор | :", result2)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Оба способа делают одно и то же. Элемент 3
+            присутствует в обоих множествах, но в результате он появляется
+            только один раз, так как множество не хранит дубликаты. Оператор | —
+            это более короткий и удобный способ записи объединения.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Метод union: {1, 2, 3, 4, 5}</span>
+              <span class="output">Оператор | : {1, 2, 3, 4, 5}</span>
+                    </code></pre>
+          </div>
+
+          <p>Пересечение множеств (intersection или &)</p>
+          <p>
+            Пересечение возвращает новое множество, содержащее только те
+            элементы, которые присутствуют в обоих исходных множествах.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">set1</span> = {1, 2, 3, 4}
+      <span class="perem">set2</span> = {3, 4, 5, 6}
+      <span class="perem">result</span> = set1.intersection(set2)   # Метод intersection
+      <span class="perem">result2</span> = set1 & set2              # Оператор & 
+      <span class="perem">print</span>("Метод intersection:", result)
+      <span class="perem">print</span>("Оператор & :", result2)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Пересечение находит общие элементы. В этом
+            примере числа 3 и 4 есть в обоих множествах, поэтому они попадают в
+            результат. Оператор & работает аналогично оператору пересечения в
+            математике.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Метод intersection: {3, 4}</span>
+              <span class="output">Оператор & : {3, 4}</span>
+                    </code></pre>
+          </div>
+
+          <p>Разность множеств (difference или -)</p>
+          <p>
+            Разность возвращает элементы первого множества, которых нет во
+            втором множестве.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">set1</span> = {1, 2, 3, 4, 5}
+      <span class="perem">set2</span> = {4, 5, 6, 7}
+      <span class="perem">result</span> = set1.difference(set2)   # Метод difference
+      <span class="perem">result2</span> = set1 - set2          # Оператор -
+      <span class="perem">print</span>("Метод difference:", result)
+      <span class="perem">print</span>("Оператор - :", result2)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Из первого множества вычитаются все элементы,
+            которые есть во втором. В результате остаются только те элементы,
+            которые уникальны для первого множества. Обратите внимание: операция
+            не симметрична — set1 - set2 и set2 - set1 дадут разные результаты.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Метод difference: {1, 2, 3}</span>
+              <span class="output">Оператор - : {1, 2, 3}</span>
+                    </code></pre>
+          </div>
+
+          <p>Симметрическая разность (symmetric_difference или ^)</p>
+          <p>
+            Симметрическая разность возвращает элементы, которые есть только в
+            одном из множеств, но не в обоих одновременно.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">set1</span> = {1, 2, 3, 4}
+      <span class="perem">set2</span> = {3, 4, 5, 6}
+      <span class="perem">result</span> = set1.symmetric_difference(set2)  # Метод
+      <span class="perem">result2</span> = set1 ^ set2                     # Оператор ^
+      <span class="perem">print</span>("Метод symmetric_difference:", result)
+      <span class="perem">print</span>("Оператор ^ :", result2)
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Симметрическая разность — это объединение
+            минус пересечение. В результат попадают элементы, которые есть в
+            первом или во втором множестве, но не в обоих сразу. В нашем примере
+            1 и 2 есть только в set1, 5 и 6 — только в set2, а 3 и 4 есть в
+            обоих, поэтому они не попадают в результат.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Метод symmetric_difference: {1, 2, 5, 6}</span>
+              <span class="output">Оператор ^ : {1, 2, 5, 6}</span>
+                    </code></pre>
+          </div>
+
+          <p>Проверка подмножества и надмножества</p>
+          <p>
+            issubset() проверяет, все ли элементы множества входят в другое
+            множество (является ли оно подмножеством). issuperset() проверяет,
+            содержит ли множество все элементы другого (является ли оно
+            надмножеством).
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">set1</span> = {1, 2, 3}
+      <span class="perem">set2</span> = {1, 2, 3, 4, 5}
+      <span class="perem">print</span>("set1 подмножество set2?", set1.issubset(set2))
+      <span class="perem">print</span>("set2 надмножество set1?", set2.issuperset(set1))
+      <span class="perem">print</span>("set1 надмножество set2?", set1.issuperset(set2))
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Все элементы set1 (1, 2, 3) присутствуют в
+            set2, поэтому set1 является подмножеством set2, а set2 —
+            надмножеством set1. Обратное неверно, так как в set2 есть элементы 4
+            и 5, которых нет в set1.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">set1 подмножество set2? True</span>
+              <span class="output">set2 надмножество set1? True</span>
+              <span class="output">set1 надмножество set2? False</span>
+                    </code></pre>
+          </div>
+
+          <p>Проверка наличия элемента и длина множества</p>
+          <p>
+            Оператор in проверяет, есть ли элемент в множестве (очень быстро,
+            даже для больших множеств), а функция len() возвращает количество
+            уникальных элементов.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">fruits</span> = {"яблоко", "банан", "апельсин"}
+      <span class="perem">print</span>("Есть ли банан?", "банан" in fruits)
+      <span class="perem">print</span>("Есть ли вишня?", "вишня" in fruits)
+      <span class="perem">print</span>("Количество элементов в множестве:", len(fruits))
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> Оператор in в множествах работает очень
+            быстро — за O(1) в среднем. Это одно из главных преимуществ множеств
+            перед списками, где поиск элемента занимает O(n). Функция len()
+            возвращает количество уникальных элементов.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">Есть ли банан? True</span>
+              <span class="output">Есть ли вишня? False</span>
+              <span class="output">Количество элементов в множестве: 3</span>
+                    </code></pre>
+          </div>
+
+          <p>Очистка множества и замороженные множества</p>
+          <p>
+            clear() удаляет все элементы из множества, превращая его в пустое
+            множество. frozenset() создает неизменяемую версию множества,
+            которую можно использовать в качестве ключа словаря.
+          </p>
+
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Программный код:</p><code>
+      <span class="perem">numbers</span> = {1, 2, 3, 4, 5}
+      <span class="perem">numbers</span>.clear()
+      <span class="perem">print</span>("После очистки:", numbers)
+      
+      <span class="perem">frozen</span> = frozenset([1, 2, 3, 3, 4])
+      <span class="perem">print</span>("Замороженное множество:", frozen)
+      <span class="perem"># frozen.add(5)</span>  # Если раскомментировать — будет ошибка!
+                    </code></pre>
+          </div>
+          <p>
+            <em>📝 Пояснение:</em> clear() полностью опустошает множество.
+            frozenset() — это неизменяемая версия множества. Его нельзя изменить
+            (добавлять или удалять элементы), но он может использоваться в
+            качестве ключа словаря или элемента другого множества, в отличие от
+            обычного set.
+          </p>
+          <div class="block-c">
+            <pre
+              class="code-block hei-block3"
+            ><p class="code-title">Вывод:</p><code>
+              <span class="output">После очистки: set()</span>
+              <span class="output">Замороженное множество: frozenset({1, 2, 3, 4})</span>
+                    </code></pre>
+          </div>
+        </div>
+      </article>
+
+      <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+      <div class="modal" id="quizModal">
+        <div class="modal-dialog">
+          <button class="modal-close" id="closeQuizBtn">x</button>
+          <h2 id="quizTitle">Мини-тест по основам Python</h2>
+          <p class="modal-desc">
+            Ответьте на все вопросы, затем нажмите "Проверить"
+          </p>
+          <form id="quizForm" class="quiz">
+            <div id="quizQuestions"></div>
+            <div class="quiz-actions">
+              <button
+                type="button"
+                id="checkQuizBtn"
+                class="quiz-action-btn quiz-primary"
+              >
+                Проверить
+              </button>
+              <button
+                type="button"
+                id="resetQuizBtn"
+                class="quiz-action-btn quiz-ghost"
+              >
+                сбросить
+              </button>
+            </div>
+            <div id="quizResult" class="quiz-result"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function saveProgress(testId, score, total) {
+        const progress = JSON.parse(localStorage.getItem("progress")) || {};
+        progress[testId] = { score, total };
+        localStorage.setItem("progress", JSON.stringify(progress));
+      }
+      const QUESTIONS = [
+        {
+          q: "Как создать пустое множество?",
+          options: ["{}", "[]", "set()", "()"],
+          answer: 2,
+        },
+        {
+          q: "Что выведет код: s = {1, 2, 2, 3, 3}; print(s)?",
+          options: ["{1, 2, 2, 3, 3}", "{1, 2, 3}", "Ошибку", "{2, 3}"],
+          answer: 1,
+        },
+        {
+          q: "Какой оператор используется для объединения множеств?",
+          options: ["&", "|", "+", "and"],
+          answer: 1,
+        },
+        {
+          q: "Что вернет код: a = {1, 2, 3}; b = {3, 4, 5}; print(a & b)?",
+          options: ["{1, 2, 3, 4, 5}", "{3}", "{1, 2}", "Ошибку"],
+          answer: 1,
+        },
+        {
+          q: "Как добавить элемент в множество?",
+          options: [
+            "s.add(item)",
+            "s.append(item)",
+            "s.insert(item)",
+            "s.push(item)",
+          ],
+          answer: 0,
+        },
+        {
+          q: "Что делает метод s.discard(x)?",
+          options: [
+            "Добавляет элемент x",
+            "Удаляет элемент x если он есть",
+            "Удаляет элемент x или вызывает ошибку",
+            "Проверяет наличие элемента x",
+          ],
+          answer: 1,
+        },
+        {
+          q: "Что вернет код: s = {1, 2, 3}; print(len(s))?",
+          options: ["1", "2", "3", "6"],
+          answer: 2,
+        },
+      ];
+
+      const modal = document.getElementById("quizModal");
+      const openBtn = document.getElementById("openQuizBtn");
+      const closeBtn = document.getElementById("closeQuizBtn");
+      const questionsContainer = document.getElementById("quizQuestions");
+      const checkBtn = document.getElementById("checkQuizBtn");
+      const resetBtn = document.getElementById("resetQuizBtn");
+      const resultBox = document.getElementById("quizResult");
+
+      function renderQuestions() {
+        questionsContainer.innerHTML = "";
+        QUESTIONS.forEach((item, idx) => {
+          const block = document.createElement("div");
+          block.className = "quiz-question";
+          block.innerHTML = `
+      <p>${idx + 1}. ${item.q}</p>
+      ${item.options
+        .map(
+          (opt, i) => `
+          <label>
+              <input type='radio' name='q${idx}' value='${i}'> ${opt}
+          </label><br>`
+        )
+        .join("")}
+      `;
+          questionsContainer.appendChild(block);
+        });
+      }
+      function checkAnswers() {
+        let correct = 0;
+        QUESTIONS.forEach((q, idx) => {
+          const chosen = document.querySelector(
+            `input[name="q${idx}"]:checked`
+          );
+          if (chosen && Number(chosen.value) == q.answer) {
+            correct++;
+          }
+        });
+        resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+        saveProgress("Множества", correct, QUESTIONS.length);
+      }
+      function resetQuiz() {
+        document.getElementById("quizForm").reset();
+        resultBox.textContent = "";
+      }
+      openBtn.onclick = () => {
+        renderQuestions();
+        modal.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        modal.classList.remove("show");
+      };
+
+      checkBtn.onclick = checkAnswers;
+
+      reset.onclick = resetQuiz;
+    </script>
+  </body>
+</html>

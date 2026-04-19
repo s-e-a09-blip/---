@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Циклы</title>
+    <link rel="stylesheet" href="style.css" />
+    <!DOCTYPE html>
+    <html lang="ru">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images\pythonicon.jpg" />
+        <title>Стили письма</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <header class="stile-header">
+          <div class="container">
+            <h1>Python учебник</h1>
+            <nav class="nav2">
+              <a href="index.html">Главная</a>
+              <a href="progress.html">Прогресс</a>
+              <a href="test.html">Контрольный тест</a>
+            </nav>
+          </div>
+        </header>
+        <div class="b2">
+          <h1>Циклы</h1>
+          <p class="text-style">Рассмотрим циклы for и while</p>
+        </div>
+        <main class="main-topic">
+          <article class="subsection">
+            <h2 class="subtitle">Что такое циклы в Python?</h2>
+            <section class="section">
+              <div class="b2">
+                <p>
+                  Циклы, как и условные конструкции, относятся к числу основных
+                  строительных блоков программ Python. Вместо того чтобы
+                  многократно выполнять одну и ту же операцию, например
+                  проверять условие, можно воспользоваться циклом for или while.
+                </p>
+                <p>
+                  В циклах for могут использоваться любые разновидности структур
+                  данных: списки, кортежи, строки, словари.
+                </p>
+              </div>
+            </section>
+          </article>
+          <article class="subsection">
+            <div class="b2">
+              <h1>Цикл for</h1>
+              <p class="text-style">
+                Цикл for обеспечивает перебор всех элементов
+              </p>
+              <p>
+                <i>for val in list:</i>
+                <br />
+                <i>
+                  <font color="white"> ffffff</font>{Здесь размещается тело
+                  цикла}</i
+                >
+              </p>
+            </div>
+
+            <section class="section">
+              <div class="b2">
+                <p>
+                  Оператор «меньше» проверяет, меньше ли значение левого
+                  операнда, чем значение правого операнда. Если присмотреться к
+                  двум приведенным примерам, в первом случае выводится True,
+                  потому что 64 меньше 83, а во втором примере выводится False —
+                  ведь 73 точно не меньше 45. Аналогичным образом оператор
+                  «меньше» может использоваться для сравнения чисел с плавающей
+                  точкой, строк и многого другого.
+                </p>
+                <div class="block-c">
+                  <pre
+                    class="code-block hei-block2"
+                  ><p class="code-title">Программный код:</p><code>
+          <span class="perem">x</span> = [32, 12, 11] 
+          <span class="perem">sample</span> = 0
+          <span class="keyword">for val in x:</span>
+            <span class="keyword">sample</span>=  sample + val
+          <span class="perem">print</span> = ("The sum of numbers is", sample)
+                </code></pre>
+                </div>
+                <div class="block-c">
+                  <pre
+                    class="code-block hei-block2"
+                  ><p class="code-title">Вывод:</p><code>
+
+
+              <span class="output">The sum of the numbers is 55</span> <br> 
+                </code></pre>
+                </div>
+                <p>
+                  Вместо того чтобы выполнять арифметические операции с каждым
+                  элементом списка по отдельности, мы просто используем цикл for
+                  для автоматизации обработки.
+                </p>
+              </div>
+            </section>
+          </article>
+
+          <article class="subsection">
+            <div class="b2">
+              <h1>Цикл for</h1>
+              <p class="text-style">
+                Цикл for обеспечивает перебор всех элементов
+              </p>
+              <p>
+                <i>while условие:</i>
+                <br />
+                <i> <font color="white"> ffffff</font>{тело цикла}</i>
+              </p>
+            </div>
+
+            <section class="section">
+              <div class="b2">
+                <p>
+                  Оператор «меньше» проверяет, меньше ли значение левого
+                  операнда, чем значение правого операнда. Если присмотреться к
+                  двум приведенным примерам, в первом случае выводится True,
+                  потому что 64 меньше 83, а во втором примере выводится False —
+                  ведь 73 точно не меньше 45. Аналогичным образом оператор
+                  «меньше» может использоваться для сравнения чисел с плавающей
+                  точкой, строк и многого другого.
+                </p>
+                <div class="block-c">
+                  <pre
+                    class="code-block hei-block2"
+                  ><p class="code-title">Программный код:</p><code>
+          <span class="perem">x</span> = 0
+          <span class="perem">y</span> = 1
+          <span class="perem">z</span> = 3
+          <span class="keyword">while y<=z:</span>
+            <span class="keyword">x</span>= x + y
+            <span class="keyword">y</span>= y+1
+          <span class="perem">print</span> = ("The sum of numbers is: ", x)
+                </code></pre>
+                </div>
+                <div class="block-c">
+                  <pre
+                    class="code-block hei-block2"
+                  ><p class="code-title">Вывод:</p><code>
+
+
+              <span class="output">The sum of numbers is: 6</span> <br> 
+                </code></pre>
+                </div>
+                <p>
+                  При создании сложных программ часто используются вложенные
+                  условные конструкции и циклы
+                </p>
+              </div>
+            </section>
+          </article>
+
+          <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+          <div class="modal" id="quizModal">
+            <div class="modal-dialog">
+              <button class="modal-close" id="closeQuizBtn">x</button>
+              <h2 id="quizTitle">Мини-тест по основам Python</h2>
+              <p class="modal-desc">
+                Ответьте на все вопросы, затем нажмите "Проверить"
+              </p>
+              <form id="quizForm" class="quiz">
+                <div id="quizQuestions"></div>
+                <div class="quiz-actions">
+                  <button
+                    type="button"
+                    id="checkQuizBtn"
+                    class="quiz-action-btn quiz-primary"
+                  >
+                    Проверить
+                  </button>
+                  <button
+                    type="button"
+                    id="resetQuizBtn"
+                    class="quiz-action-btn quiz-ghost"
+                  >
+                    сбросить
+                  </button>
+                </div>
+                <div id="quizResult" class="quiz-result"></div>
+              </form>
+            </div>
+          </div>
+        </main>
+
+        <script>
+          function saveProgress(testId, score, total) {
+            const progress = JSON.parse(localStorage.getItem("progress")) || {};
+            progress[testId] = { score, total };
+            localStorage.setItem("progress", JSON.stringify(progress));
+          }
+          const QUESTIONS = [
+            {
+              q: "Сколько раз выполнится цикл: for i in range(5): print(i)?",
+              options: ["4", "5", "6", "Ошибка"],
+              answer: 1,
+            },
+            {
+              q: "Что выведет код: for i in range(2, 6): print(i, end=' ')?",
+              options: ["1 2 3 4 5", "2 3 4 5", "2 3 4 5 6", "1 2 3 4"],
+              answer: 1,
+            },
+            {
+              q: "Как прервать выполнение цикла досрочно?",
+              options: ["stop", "break", "exit", "return"],
+              answer: 1,
+            },
+            {
+              q: "Что выведет код: i = 1; while i < 5: print(i); i += 1?",
+              options: ["1 2 3 4", "1 2 3 4 5", "Бесконечный цикл", "2 3 4 5"],
+              answer: 0,
+            },
+            {
+              q: "Как пропустить текущую итерацию цикла и перейти к следующей?",
+              options: ["skip", "continue", "next", "pass"],
+              answer: 1,
+            },
+            {
+              q: "Что выведет код: for i in range(3): if i == 1: continue; print(i, end=' ')?",
+              options: ["0 1 2", "0 2", "1 2", "0 1"],
+              answer: 1,
+            },
+            {
+              q: "Какой цикл гарантированно выполнится хотя бы один раз?",
+              options: [
+                "for",
+                "while",
+                "do-while",
+                "В Python нет такого цикла",
+              ],
+              answer: 3,
+            },
+          ];
+
+          const modal = document.getElementById("quizModal");
+          const openBtn = document.getElementById("openQuizBtn");
+          const closeBtn = document.getElementById("closeQuizBtn");
+          const questionsContainer = document.getElementById("quizQuestions");
+          const checkBtn = document.getElementById("checkQuizBtn");
+          const resetBtn = document.getElementById("resetQuizBtn");
+          const resultBox = document.getElementById("quizResult");
+
+          function renderQuestions() {
+            questionsContainer.innerHTML = "";
+            QUESTIONS.forEach((item, idx) => {
+              const block = document.createElement("div");
+              block.className = "quiz-question";
+              block.innerHTML = `
+      <p>${idx + 1}. ${item.q}</p>
+      ${item.options
+        .map(
+          (opt, i) => `
+          <label>
+              <input type='radio' name='q${idx}' value='${i}'> ${opt}
+          </label><br>`
+        )
+        .join("")}
+      `;
+              questionsContainer.appendChild(block);
+            });
+          }
+          function checkAnswers() {
+            let correct = 0;
+            QUESTIONS.forEach((q, idx) => {
+              const chosen = document.querySelector(
+                `input[name="q${idx}"]:checked`
+              );
+              if (chosen && Number(chosen.value) == q.answer) {
+                correct++;
+              }
+            });
+            resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+            saveProgress("Циклы", correct, QUESTIONS.length);
+          }
+          function resetQuiz() {
+            document.getElementById("quizForm").reset();
+            resultBox.textContent = "";
+          }
+          openBtn.onclick = () => {
+            renderQuestions();
+            modal.classList.add("show");
+          };
+
+          closeBtn.onclick = () => {
+            modal.classList.remove("show");
+          };
+
+          checkBtn.onclick = checkAnswers;
+
+          reset.onclick = resetQuiz;
+        </script>
+      </body>
+    </html>
+  </head>
+</html>

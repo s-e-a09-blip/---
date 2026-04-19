@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <!DOCTYPE html>
+        <html lang="ru">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
+            <link rel="icon" href="images\pythonicon.jpg" />
+            <title>Стили письма</title>
+            <link rel="stylesheet" href="style.css" />
+          </head>
+          <body>
+            <header class="stile-header">
+              <div class="container">
+                <h1>Python учебник</h1>
+                <nav class="nav2">
+                  <a href="index.html">Главная</a>
+                  <a href="progress.html">Прогресс</a>
+                  <a href="test.html">Контрольный тест</a>
+                </nav>
+              </div>
+            </header>
+            <div class="b2">
+              <h1>Строка</h1>
+            </div>
+            <main class="main-topic">
+              <article class="subsection">
+                <h2 class="subtitle">Что такое строка в Python?</h2>
+                <section class="section">
+                  <div class="b2">
+                    <p>
+                      Строки (тип str) — это последовательности символов,
+                      которые помогают нам хранить и обрабатывать текстовую
+                      информацию. Они нужны буквально везде: для вывода
+                      сообщений пользователю, хранения имен, адресов, работы с
+                      файлами и многого другого!Python предлагает несколько
+                      удобных способов создания строк. Вы можете использовать
+                      одинарные, двойные или тройные кавычки.
+                    </p>
+                  </div>
+                </section>
+                <div class="b2">
+                  <h1>Изменение строк:</h1>
+                  <p>
+                    Теперь, когда мы умеем создавать строки, давайте научимся с
+                    ними работать. Python предлагает множество удобных операций
+                    для манипуляции строками.
+                  </p>
+                  <p>Сложение строк</p>
+                  <p>
+                    Строки можно складывать с помощью оператора +, чтобы
+                    создавать новые строки:
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">first_name</span> = "Иван"
+      <span class="perem">last_name</span>= "Петров"
+      <span class="perem">full_name</span>= first_name + " " + last_name
+      <span class="perem">print</span>(full_name)
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+
+               <span class="output">Иван Петров</span> <br>
+                    </code></pre>
+                  </div>
+                  <p>Повторение строк</p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">star_line</span> = "=" * 10
+      <span class="perem">print</span>(star_line)
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+
+              <span class="output">==========</span> <br>
+                    </code></pre>
+                  </div>
+
+                  <p>
+                    Доступ к отдельным символам <br />Строки в Python – это
+                    последовательности символов, и мы можем обращаться к каждому
+                    символу по его позиции (индексу). Индексация начинается с 0:
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">world</span> = "Python"
+      <span class="perem">print</span>(world[-1])
+      <span class="perem">print</span>(world[0])
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+              <span class="output">P</span> 
+              <span class="output">n</span> 
+                    </code></pre>
+                  </div>
+                  <p>
+                    Получение части строки (срезы) <br />Одна из самых мощных
+                    возможностей Python – это срезы (slices). Они позволяют
+                    извлекать подстроки, указывая начальный и конечный индексы:
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">world</span> = "Python Programming"
+      <span class="perem">print</span>(message[0:6])
+      <span class="perem">print</span>(message[::2])
+      <span class="perem">print</span>(message[::-1])
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+              <span class="output">Python</span>
+              <span class="output">Pto rgamn</span> 
+              <span class="output">gnimmargorP nohtyP</span>
+                    </code></pre>
+                  </div>
+
+                  <p>
+                    Разделение и объединение строк <br />Эти методы очень
+                    полезны при работе с данными:
+                  </p>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">a</span> = ["Python", "это", "здорово"]
+      <span class="perem">b</span>" ".join(a)
+      <span class="perem">print</span>(b)
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+              <span class="output">Python это здорово</span> <br>
+                    </code></pre>
+                  </div>
+
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Программный код:</p><code>
+      <span class="perem">a</span> = "Python - язык программирования"
+      <span class="perem">b</span>a.split()
+      <span class="perem">print</span>(b)
+                    </code></pre>
+                  </div>
+                  <div class="block-c">
+                    <pre
+                      class="code-block hei-block3"
+                    ><p class="code-title">Вывод:</p><code>
+        <span class="output">'Python', '-', 'язык', 'программирования'</span> <br>
+                    </code></pre>
+                  </div>
+                </div>
+              </article>
+
+              <button class="quiz-btn" id="openQuizBtn">Пройти тест</button>
+              <div class="modal" id="quizModal">
+                <div class="modal-dialog">
+                  <button class="modal-close" id="closeQuizBtn">x</button>
+                  <h2 id="quizTitle">Мини-тест по основам Python</h2>
+                  <p class="modal-desc">
+                    Ответьте на все вопросы, затем нажмите "Проверить"
+                  </p>
+                  <form id="quizForm" class="quiz">
+                    <div id="quizQuestions"></div>
+                    <div class="quiz-actions">
+                      <button
+                        type="button"
+                        id="checkQuizBtn"
+                        class="quiz-action-btn quiz-primary"
+                      >
+                        Проверить
+                      </button>
+                      <button
+                        type="button"
+                        id="resetQuizBtn"
+                        class="quiz-action-btn quiz-ghost"
+                      >
+                        сбросить
+                      </button>
+                    </div>
+                    <div id="quizResult" class="quiz-result"></div>
+                  </form>
+                </div>
+              </div>
+            </main>
+
+            <script>
+              function saveProgress(testId, score, total) {
+                const progress =
+                  JSON.parse(localStorage.getItem("progress")) || {};
+                progress[testId] = { score, total };
+                localStorage.setItem("progress", JSON.stringify(progress));
+              }
+              const QUESTIONS = [
+                {
+                  q: "Как создать строку в Python?",
+                  options: [
+                    "'текст'",
+                    '"текст"',
+                    "'''текст'''",
+                    "Все варианты верны",
+                  ],
+                  answer: 3,
+                },
+                {
+                  q: "Что вернет код: 'Hello' + ' ' + 'World'?",
+                  options: ["'HelloWorld'", "'Hello World'", "Ошибку", "None"],
+                  answer: 1,
+                },
+                {
+                  q: "Как получить первый символ строки s = 'Python'?",
+                  options: ["s[0]", "s[1]", "s[-1]", "s.first()"],
+                  answer: 0,
+                },
+                {
+                  q: "Что вернет код: s = 'Python'; print(s[-1])?",
+                  options: ["P", "y", "n", "Ошибку"],
+                  answer: 2,
+                },
+                {
+                  q: "Как получить срез строки s = 'Programming' от индекса 0 до 4?",
+                  options: ["s[0:4]", "s[0:5]", "s[0:3]", "s[:4]"],
+                  answer: 0,
+                },
+                {
+                  q: "Какой метод используется для объединения списка строк в одну строку?",
+                  options: ["split()", "join()", "concat()", "merge()"],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: '=' * 10?",
+                  options: ["'=========='", "10", "Ошибку", "None"],
+                  answer: 0,
+                },
+                {
+                  q: "Какой метод разбивает строку на список подстрок?",
+                  options: ["join()", "split()", "break()", "divide()"],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: s = 'Python'; print(s[::2])?",
+                  options: ["'Pto'", "'Pto'", "'yhn'", "'Python'"],
+                  answer: 1,
+                },
+                {
+                  q: "Что вернет код: s = 'Python'; print(s[::-1])?",
+                  options: ["'Python'", "'nohtyP'", "'P'", "Ошибку"],
+                  answer: 1,
+                },
+              ];
+
+              const modal = document.getElementById("quizModal");
+              const openBtn = document.getElementById("openQuizBtn");
+              const closeBtn = document.getElementById("closeQuizBtn");
+              const questionsContainer =
+                document.getElementById("quizQuestions");
+              const checkBtn = document.getElementById("checkQuizBtn");
+              const resetBtn = document.getElementById("resetQuizBtn");
+              const resultBox = document.getElementById("quizResult");
+
+              function renderQuestions() {
+                questionsContainer.innerHTML = "";
+                QUESTIONS.forEach((item, idx) => {
+                  const block = document.createElement("div");
+                  block.className = "quiz-question";
+                  block.innerHTML = `
+      <p>${idx + 1}. ${item.q}</p>
+      ${item.options
+        .map(
+          (opt, i) => `
+          <label>
+              <input type='radio' name='q${idx}' value='${i}'> ${opt}
+          </label><br>`
+        )
+        .join("")}
+      `;
+                  questionsContainer.appendChild(block);
+                });
+              }
+              function checkAnswers() {
+                let correct = 0;
+                QUESTIONS.forEach((q, idx) => {
+                  const chosen = document.querySelector(
+                    `input[name="q${idx}"]:checked`
+                  );
+                  if (chosen && Number(chosen.value) == q.answer) {
+                    correct++;
+                  }
+                });
+                resultBox.textContent = `Результат: ${correct} из ${QUESTIONS.length}`;
+                saveProgress("Кортежи и строки", correct, QUESTIONS.length);
+              }
+              function resetQuiz() {
+                document.getElementById("quizForm").reset();
+                resultBox.textContent = "";
+              }
+              openBtn.onclick = () => {
+                renderQuestions();
+                modal.classList.add("show");
+              };
+
+              closeBtn.onclick = () => {
+                modal.classList.remove("show");
+              };
+
+              checkBtn.onclick = checkAnswers;
+
+              reset.onclick = resetQuiz;
+            </script>
+          </body>
+        </html>
+      </head>
+    </html>
+  </body>
+</html>
