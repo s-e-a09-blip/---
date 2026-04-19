@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="ru">
       <head>
         <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-        <!DOCTYPE html>
+        <!doctype html>
         <html lang="ru">
           <head>
             <meta charset="UTF-8" />
@@ -78,16 +78,16 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {
+          <span class="perem">person</span> = {
                   "name": "Иван",
                   "age": 25,
                   "city": "Москва"
               }
-              <span class="perem">print</span>(person["name"])      # Доступ по ключу
-              <span class="perem">print</span>(person.get("age"))   # Безопасный доступ через get()
-              <span class="perem">print</span>(person.get("country", "Не указано"))  # Значение по умолчанию
+          <span class="perem">print</span>(person["name"])      # Доступ по ключу
+          <span class="perem">print</span>(person.get("age"))   # Безопасный доступ через get()
+          <span class="perem">print</span>(person.get("country", "Не указано"))  # Значение по умолчанию
                             </code></pre>
                   </div>
                   <p>
@@ -101,11 +101,11 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">Иван</span>
-                      <span class="output">25</span>
-                      <span class="output">Не указано</span>
+              <span class="output">Иван</span>
+              <span class="output">25</span>
+              <span class="output">Не указано</span>
                             </code></pre>
                   </div>
 
@@ -117,12 +117,12 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {"name": "Иван", "age": 25}
-              <span class="perem">person</span>["city"] = "Москва"        # Добавляем новую пару
-              <span class="perem">person</span>["age"] = 26              # Изменяем существующее значение
-              <span class="perem">print</span>(person)
+          <span class="perem">person</span> = {"name": "Иван", "age": 25}
+          <span class="perem">person</span>["city"] = "Москва"        # Добавляем новую пару
+          <span class="perem">person</span>["age"] = 26              # Изменяем существующее значение
+          <span class="perem">print</span>(person)
                             </code></pre>
                   </div>
                   <p>
@@ -134,9 +134,9 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">{'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
+                  <span class="output">{'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
                             </code></pre>
                   </div>
 
@@ -149,17 +149,17 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва", "job": "инженер"}
+          <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва", "job": "инженер"}
               
-              <span class="perem">age</span> = person.pop("age")           # Удаляем по ключу, получаем значение
-              <span class="perem">last_item</span> = person.popitem()      # Удаляем последнюю добавленную пару
-              <span class="perem">del</span> person["city"]                # Удаляем по ключу (значение не возвращается)
+          <span class="perem">age</span> = person.pop("age")           # Удаляем по ключу, получаем значение
+          <span class="perem">last_item</span> = person.popitem()      # Удаляем последнюю добавленную пару
+          <span class="perem">del</span> person["city"]                # Удаляем по ключу (значение не возвращается)
               
-              <span class="perem">print</span>("Удаленный возраст:", age)
-              <span class="perem">print</span>("Последняя удалённая пара:", last_item)
-              <span class="perem">print</span>("Оставшийся словарь:", person)
+          <span class="perem">print</span>("Удаленный возраст:", age)
+          <span class="perem">print</span>("Последняя удалённая пара:", last_item)
+          <span class="perem">print</span>("Оставшийся словарь:", person)
                             </code></pre>
                   </div>
                   <p>
@@ -173,11 +173,11 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">Удаленный возраст: 25</span>
-                      <span class="output">Последняя удалённая пара: ('job', 'инженер')</span>
-                      <span class="output">Оставшийся словарь: {'name': 'Иван'}</span>
+                  <span class="output">Удаленный возраст: 25</span>
+                  <span class="output">Последняя удалённая пара: ('job', 'инженер')</span>
+                  <span class="output">Оставшийся словарь: {'name': 'Иван'}</span>
                             </code></pre>
                   </div>
 
@@ -189,21 +189,21 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
+          <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
               
-              <span class="perem">print</span>("Ключи:")
-              <span class="perem">for</span> key <span class="perem">in</span> person.keys():
-                  <span class="perem">print</span>(f"  {key}")
+          <span class="perem">print</span>("Ключи:")
+          <span class="perem">for</span> key <span class="perem">in</span> person.keys():
+              <span class="perem">print</span>(f"  {key}")
               
-              <span class="perem">print</span>("Значения:")
-              <span class="perem">for</span> value <span class="perem">in</span> person.values():
-                  <span class="perem">print</span>(f"  {value}")
+          <span class="perem">print</span>("Значения:")
+          <span class="perem">for</span> value <span class="perem">in</span> person.values():
+              <span class="perem">print</span>(f"  {value}")
               
-              <span class="perem">print</span>("Пары ключ-значение:")
-              <span class="perem">for</span> key, value <span class="perem">in</span> person.items():
-                  <span class="perem">print</span>(f"  {key}: {value}")
+          <span class="perem">print</span>("Пары ключ-значение:")
+          <span class="perem">for</span> key, value <span class="perem">in</span> person.items():
+              <span class="perem">print</span>(f"  {key}: {value}")
                             </code></pre>
                   </div>
                   <p>
@@ -215,20 +215,20 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">Ключи:</span>
-                      <span class="output">  name</span>
-                      <span class="output">  age</span>
-                      <span class="output">  city</span>
-                      <span class="output">Значения:</span>
-                      <span class="output">  Иван</span>
-                      <span class="output">  25</span>
-                      <span class="output">  Москва</span>
-                      <span class="output">Пары ключ-значение:</span>
-                      <span class="output">  name: Иван</span>
-                      <span class="output">  age: 25</span>
-                      <span class="output">  city: Москва</span>
+                  <span class="output">Ключи:</span>
+                  <span class="output">  name</span>
+                  <span class="output">  age</span>
+                  <span class="output">  city</span>
+                  <span class="output">Значения:</span>
+                  <span class="output">  Иван</span>
+                  <span class="output">  25</span>
+                  <span class="output">  Москва</span>
+                  <span class="output">Пары ключ-значение:</span>
+                  <span class="output">  name: Иван</span>
+                  <span class="output">  age: 25</span>
+                  <span class="output">  city: Москва</span>
                             </code></pre>
                   </div>
 
@@ -240,15 +240,15 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
+          <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
               
-              <span class="perem">if</span> "name" <span class="perem">in</span> person:
-                  <span class="perem">print</span>("Ключ 'name' существует!")
-                  <span class="perem">print</span>(f"Его значение: {person['name']}")
+          <span class="perem">if</span> "name" <span class="perem">in</span> person:
+              <span class="perem">print</span>("Ключ 'name' существует!")
+              <span class="perem">print</span>(f"Его значение: {person['name']}")
               
-              <span class="perem">if</span> "country" <span class="perem">not in</span> person:
+          <span class="perem">if</span> "country" <span class="perem">not in</span> person:
                   <span class="perem">print</span>("Ключа 'country' нет в словаре")
                             </code></pre>
                   </div>
@@ -262,11 +262,11 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">Ключ 'name' существует!</span>
-                      <span class="output">Его значение: Иван</span>
-                      <span class="output">Ключа 'country' нет в словаре</span>
+                  <span class="output">Ключ 'name' существует!</span>
+                  <span class="output">Его значение: Иван</span>
+                  <span class="output">Ключа 'country' нет в словаре</span>
                             </code></pre>
                   </div>
 
@@ -279,17 +279,17 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
-              <span class="perem">person</span> = {"name": "Иван", "age": 25}
-              <span class="perem">new_data</span> = {"age": 26, "city": "Москва"}
+          <span class="perem">person</span> = {"name": "Иван", "age": 25}
+          <span class="perem">new_data</span> = {"age": 26, "city": "Москва"}
               
-              <span class="perem">person</span>.update(new_data)      # Обновляем/добавляем данные
-              <span class="perem">print</span>("После update():", person)
+          <span class="perem">person</span>.update(new_data)      # Обновляем/добавляем данные
+          <span class="perem">print</span>("После update():", person)
               
-              <span class="perem">country</span> = person.setdefault("country", "Россия")
-              <span class="perem">print</span>("Значение country:", country)
-              <span class="perem">print</span>("После setdefault():", person)
+          <span class="perem">country</span> = person.setdefault("country", "Россия")
+          <span class="perem">print</span>("Значение country:", country)
+          <span class="perem">print</span>("После setdefault():", person)
                             </code></pre>
                   </div>
                   <p>
@@ -302,11 +302,11 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
-                      <span class="output">После update(): {'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
-                      <span class="output">Значение country: Россия</span>
-                      <span class="output">После setdefault(): {'name': 'Иван', 'age': 26, 'city': 'Москва', 'country': 'Россия'}</span>
+                  <span class="output">После update(): {'name': 'Иван', 'age': 26, 'city': 'Москва'}</span>
+                  <span class="output">Значение country: Россия</span>
+                  <span class="output">После setdefault(): {'name': 'Иван', 'age': 26, 'city': 'Москва', 'country': 'Россия'}</span>
                             </code></pre>
                   </div>
 
@@ -318,7 +318,7 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
               <span class="perem">person</span> = {"name": "Иван", "age": 25, "city": "Москва"}
               <span class="perem">print</span>(f"Количество элементов: {len(person)}")
@@ -337,7 +337,7 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
                       <span class="output">Количество элементов: 3</span>
                       <span class="output">После очистки: {}</span>
@@ -354,7 +354,7 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
               <span class="perem">students</span> = {
                   "student1": {
@@ -384,7 +384,7 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
                       <span class="output">Иван</span>
                       <span class="output">[5, 5, 5, 4]</span>
@@ -400,7 +400,7 @@
 
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Программный код:</p><code>
               <span class="perem">squares</span> = {x: x**2 <span class="perem">for</span> x <span class="perem">in</span> range(5)}
               <span class="perem">print</span>("Квадраты чисел:", squares)
@@ -424,7 +424,7 @@
                   </p>
                   <div class="block-c">
                     <pre
-                      class="code-block hei-block2"
+                      class="code-block hei-block4"
                     ><p class="code-title">Вывод:</p><code>
                       <span class="output">Квадраты чисел: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}</span>
                       <span class="output">Длина слов: {'яблоко': 6, 'банан': 5, 'апельсин': 8}</span>
@@ -597,7 +597,7 @@
             (opt, i) => `
             <label>
                 <input type='radio' name='q${idx}' value='${i}'> ${opt}
-            </label><br>`
+            </label><br>`,
           )
           .join("")}
         `;
@@ -608,7 +608,7 @@
                 let correct = 0;
                 QUESTIONS.forEach((q, idx) => {
                   const chosen = document.querySelector(
-                    `input[name="q${idx}"]:checked`
+                    `input[name="q${idx}"]:checked`,
                   );
                   if (chosen && Number(chosen.value) == q.answer) {
                     correct++;

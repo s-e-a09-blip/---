@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
+    <!doctype html>
+    <html lang="ru">
       <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-        <!DOCTYPE html>
+        <!doctype html>
         <html lang="ru">
           <head>
             <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
               content="width=device-width, initial-scale=1.0"
             />
             <link rel="icon" href="images\pythonicon.jpg" />
-            <title>Стили письма</title>
+            <title>Строка</title>
             <link rel="stylesheet" href="style.css" />
           </head>
           <body>
@@ -185,7 +185,7 @@
                       class="code-block hei-block3"
                     ><p class="code-title">Программный код:</p><code>
       <span class="perem">a</span> = "Python - язык программирования"
-      <span class="perem">b</span>a.split()
+      <span class="perem">b</span>= a.split()
       <span class="perem">print</span>(b)
                     </code></pre>
                   </div>
@@ -317,7 +317,7 @@
           (opt, i) => `
           <label>
               <input type='radio' name='q${idx}' value='${i}'> ${opt}
-          </label><br>`
+          </label><br>`,
         )
         .join("")}
       `;
@@ -328,7 +328,7 @@
                 let correct = 0;
                 QUESTIONS.forEach((q, idx) => {
                   const chosen = document.querySelector(
-                    `input[name="q${idx}"]:checked`
+                    `input[name="q${idx}"]:checked`,
                   );
                   if (chosen && Number(chosen.value) == q.answer) {
                     correct++;
