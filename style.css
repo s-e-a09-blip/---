@@ -158,7 +158,7 @@ nav a {
 }
 
 .miniblock {
-  font-size: 1px;
+  font-size: 0.2px;
   text-align: center;
   border: 2px solid #90e5ff;
   max-width: 70px;
@@ -731,7 +731,7 @@ nav a {
   .block2 {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 70%;
   }
   
   .block2-2 {

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Циклы</title>
     <link rel="stylesheet" href="style.css" />
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="ru">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="images\pythonicon.jpg" />
-        <title>Стили письма</title>
-        <link rel="stylesheet" href="style.css" />
-      </head>
       <body>
         <header class="stile-header">
           <div class="container">
@@ -257,7 +249,7 @@
           (opt, i) => `
           <label>
               <input type='radio' name='q${idx}' value='${i}'> ${opt}
-          </label><br>`
+          </label><br>`,
         )
         .join("")}
       `;
@@ -268,7 +260,7 @@
             let correct = 0;
             QUESTIONS.forEach((q, idx) => {
               const chosen = document.querySelector(
-                `input[name="q${idx}"]:checked`
+                `input[name="q${idx}"]:checked`,
               );
               if (chosen && Number(chosen.value) == q.answer) {
                 correct++;
