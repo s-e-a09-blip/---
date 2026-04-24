@@ -164,6 +164,7 @@ nav a {
   max-width: 70px;
   margin: 0px auto;
   margin-bottom: 60px;
+  background-color: #90e5ff;
 }
 
 .lessons a {
@@ -813,5 +814,47 @@ nav a {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+}
+.code-block,
+.hei-block3,
+.hei-block4,
+[class*="hei-block"] {
+  max-width: 100% !important;
+  width: auto !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* Чтобы текст внутри не разрывался плохо */
+.code-block pre,
+.code-block code {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 13px;
+}
+
+/* Таблицы тоже не вылазят */
+.table-per,
+table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+@media (max-width: 768px) {
+  .miniblock {
+    max-width: 40px !important;
+    border-width: 1.5px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .miniblock {
+    max-width: 30px !important;
+    border-width: 1px !important;
   }
 }
