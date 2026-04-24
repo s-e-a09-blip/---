@@ -731,12 +731,12 @@ nav a {
   .block2 {
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 100%;
   }
   
   .block2-2 {
     margin: 20px 16px;
-    width: 90%;
+    width: 60%;
   }
   
   .lessons a {
