@@ -676,164 +676,112 @@ nav a {
 
 /* Адаптация под телефон */
 @media (max-width: 768px) {
-  .stile-header .container {
+  .container4 {
     flex-direction: column;
+    height: auto;
+    padding: 16px;
     text-align: center;
-    padding: 15px;
   }
   
-  .nav2 {
-    margin-top: 10px;
+  .h11 {
+    margin-left: 0;
   }
   
-  .nav2 a {
-    font-size: 18px;
-    margin: 0 10px;
+  nav a {
     display: inline-block;
+    margin: 5px 8px;
+    font-size: 16px;
   }
   
-  h1 {
-    font-size: 28px;
-    text-align: center;
+  .block {
+    width: 95%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px 10px;
   }
   
-  .stats-cards {
-    gap: 12px;
-    margin: 20px 10px;
+  .text {
+    font-size: 40px;
+    margin-top: 60px;
   }
   
-  .stat-card {
-    padding: 12px 20px;
-    min-width: 100px;
+  .text2 {
+    font-size: 18px;
+    padding: 0 16px;
   }
   
-  .stat-number {
-    font-size: 28px;
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
   
-  .stat-label {
-    font-size: 11px;
+  .btn1, .btn2 {
+    margin-right: 0;
+    width: fit-content;
+  }
+  
+  .h12 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  
+  .block2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .block2-2 {
+    margin: 20px 16px;
+    width: 90%;
+  }
+  
+  .lessons a {
+    font-size: 16px;
+  }
+  
+  .main-home {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 16px;
   }
   
   .table-per {
     width: 100%;
-    font-size: 14px;
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
   }
   
-  .table-per th,
-  .table-per td {
-    font-size: 13px;
-    padding: 8px 10px;
-  }
-  
-  .progress-section {
-    margin: 20px 15px;
-    padding: 15px;
-  }
-  
-  .progress-header {
+  .code-block {
     font-size: 14px;
   }
   
-  .progress-bar {
-    height: 20px;
-  }
-  
-  .progress-bar-fill {
-    font-size: 11px;
-    line-height: 20px;
-  }
-  
-  main {
-    padding: 15px !important;
+  .question {
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  .stile-header .container {
-    padding: 10px;
+  .text {
+    font-size: 32px;
   }
   
-  .nav2 a {
-    font-size: 14px;
-    margin: 0 6px;
+  .text2 {
+    font-size: 16px;
   }
   
-  h1 {
-    font-size: 24px;
+  .h12 {
+    font-size: 32px;
   }
   
-  .stats-cards {
-    gap: 8px;
-  }
-  
-  .stat-card {
-    padding: 10px 15px;
-    min-width: 85px;
-  }
-  
-  .stat-number {
+  .block2-2 p {
     font-size: 22px;
   }
   
-  .stat-label {
-    font-size: 9px;
-  }
-  
-  .table-per th,
-  .table-per td {
-    font-size: 11px;
-    padding: 6px 8px;
-  }
-  
-  .badge {
-    font-size: 10px;
-    padding: 3px 8px;
-  }
-  
-  .progress-section {
-    padding: 12px;
-  }
-  
-  .progress-header {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 360px) {
-  .nav2 a {
-    font-size: 12px;
-    margin: 0 4px;
-  }
-  
-  h1 {
-    font-size: 20px;
-  }
-  
-  .stat-card {
-    padding: 8px 12px;
-    min-width: 70px;
-  }
-  
-  .stat-number {
-    font-size: 18px;
-  }
-  
-  .stat-label {
-    font-size: 8px;
-  }
-  
-  .table-per th,
-  .table-per td {
-    font-size: 10px;
-    padding: 4px 6px;
-  }
-  
-  .badge {
-    font-size: 9px;
-    padding: 2px 6px;
+  .btn1, .btn2 {
+    padding: 14px 24px;
+    font-size: 14px;
   }
 }
