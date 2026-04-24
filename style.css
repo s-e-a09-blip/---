@@ -736,7 +736,7 @@ nav a {
   
   .block2-2 {
     margin: 20px 16px;
-    width: 60%;
+    width: 90%;
   }
   
   .lessons a {
@@ -784,5 +784,34 @@ nav a {
   .btn1, .btn2 {
     padding: 14px 24px;
     font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hei-block4,
+  .code-block {
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Все блоки с фиксированной шириной становятся гибкими */
+  [class*="hei-block"] {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  
+  .table-per {
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
