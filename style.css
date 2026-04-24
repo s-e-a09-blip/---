@@ -858,3 +858,53 @@ table {
     border-width: 1px !important;
   }
 }
+
+/* ========= ИСПРАВЛЕНИЕ ДЛЯ ВСЕХ ВЫЛЕЗАЮЩИХ БЛОКОВ ========= */
+@media (max-width: 768px) {
+  /* Все блоки с кодом */
+  .code-block,
+  .hei-block,
+  .hei-block3,
+  .hei-block4,
+  [class*="code-block"],
+  [class*="hei-block"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+  
+  /* Сам блок с текстом и кодом */
+  .block {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Любые блоки с фиксированной шириной */
+  div[class*="block"],
+  section[class*="block"] {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+  
+  /* Текст внутри блоков */
+  .block p,
+  .block pre,
+  .block code {
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+  
+  /* Картинки не вылазят */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
